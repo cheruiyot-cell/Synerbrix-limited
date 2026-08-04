@@ -1,775 +1,994 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ===== PRIMARY SEO META TAGS ===== -->
-    <title>Synerbrix Limited | High-Performance Web Development, IT Support & Security Infrastructure</title>
-    <meta name="description" content="Empower your business with high-converting websites, 24/7 proactive IT support, enterprise networking, HD CCTV surveillance, and cybersecurity in Kenya. Zero downtime, single-vendor simplicity." />
-    <meta name="keywords" content="Synerbrix, digital solutions Kenya, web development Kenya, IT support Nairobi, networking services, cybersecurity Kenya, CCTV installation Nairobi, Wi-Fi hotspots, M-Pesa PayBill 400200, managed IT services" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://synerbrix.co.ke/" />
-
-    <!-- ===== OPEN GRAPH ===== -->
-    <meta property="og:title" content="Synerbrix Limited – Reliable IT & Digital Infrastructure for Growing Businesses" />
-    <meta property="og:description" content="Eliminate tech headaches with one trusted partner for Web, Networking, Cybersecurity, IT Support, and CCTV Systems. Fast response, transparent pricing." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80" />
-    <meta property="og:url" content="https://synerbrix.co.ke/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Synerbrix Limited" />
-    <meta property="og:locale" content="en_KE" />
-
-    <!-- ===== TWITTER CARDS ===== -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Synerbrix Limited – IT Support, Web & Security Infrastructure" />
-    <meta name="twitter:description" content="High-converting websites, fast IT support, enterprise Wi-Fi, and 4K CCTV setups. One partner, complete accountability." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80" />
-
-    <!-- ===== STRUCTURED DATA (JSON‑LD) ===== -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Synerbrix Limited",
-            "description": "Enterprise-grade digital and IT infrastructure solutions: high-converting web development, managed IT support, structured networking, cybersecurity audits, commercial Wi-Fi, and 4K CCTV installation.",
-            "url": "https://synerbrix.co.ke/",
-            "telephone": "+254732832849",
-            "email": "info@synerbrix.co.ke",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Nairobi",
-                "addressCountry": "KE"
-            },
-            "paymentAccepted": ["M-Pesa", "Bank Transfer"],
-            "priceRange": "$$",
-            "openingHours": "Mo-Fr 08:00-18:00",
-            "sameAs": [
-                "https://wa.me/254732832849"
-            ]
-        }
-    </script>
-
-    <!-- ===== EXTERNAL CSS (CDN) ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
-
-    <!-- FontAwesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <!-- ===== LOCAL STYLES ===== -->
-    <link rel="stylesheet" href="style.css?v=3" />
-    
-    <style>
-        .hero-main-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 0 0 12px 12px;
-            display: block;
-        }
-        .graphic-card .card-body {
-            padding: 0 !important;
-            overflow: hidden;
-        }
-        .graphic-card .card-header {
-            padding: 12px 20px;
-        }
-        .guarantee-badge {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10B981;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .stats-bar {
-            background: #0f172a;
-            color: #ffffff;
-            padding: 30px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-        .stat-item h3 {
-            font-size: 2.2rem;
-            color: #38bdf8;
-            margin-bottom: 5px;
-            font-weight: 800;
-        }
-        .stat-item p {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin: 0;
-        }
-        .badge-trust {
-            display: inline-block;
-            background: #e0f2fe;
-            color: #0369a1;
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-        .cta-microcopy {
-            font-size: 0.8rem;
-            color: #94a3b8;
-            margin-top: 8px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ===== PRIMARY SEO META TAGS ===== -->
+<title>Synerbrix Limited | High-Performance Web Development, IT Support & Security Infrastructure</title>
+<meta name="description" content="Empower your business with high-converting websites, 24/7 proactive IT support, enterprise networking, HD CCTV surveillance, and cybersecurity in Kenya. Zero downtime, single-vendor simplicity." />
+<meta name="keywords" content="Synerbrix, digital solutions Kenya, web development Kenya, IT support Nairobi, networking services, cybersecurity Kenya, CCTV installation Nairobi, Wi-Fi hotspots, M-Pesa PayBill 400200, managed IT services" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="[https://synerbrix.co.ke/](https://synerbrix.co.ke/)" />
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:title" content="Synerbrix Limited – Reliable IT & Digital Infrastructure for Growing Businesses" />
+<meta property="og:description" content="Eliminate tech headaches with one trusted partner for Web, Networking, Cybersecurity, IT Support, and CCTV Systems. Fast response, transparent pricing." />
+<meta property="og:image" content="[https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80](https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80)" />
+<meta property="og:url" content="[https://synerbrix.co.ke/](https://synerbrix.co.ke/)" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Synerbrix Limited" />
+<meta property="og:locale" content="en_KE" />
+<!-- ===== TWITTER CARDS ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Synerbrix Limited – IT Support, Web & Security Infrastructure" />
+<meta name="twitter:description" content="High-converting websites, fast IT support, enterprise Wi-Fi, and 4K CCTV setups. One partner, complete accountability." />
+<meta name="twitter:image" content="[https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80](https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80)" />
+<!-- ===== STRUCTURED DATA (JSON‑LD) ===== -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "Synerbrix Limited",
+"description": "Enterprise-grade digital and IT infrastructure solutions: high-converting web development, managed IT support, structured networking, cybersecurity audits, commercial Wi-Fi, and 4K CCTV installation.",
+"url": "https://synerbrix.co.ke/",
+"telephone": "+254732832849",
+"email": "info@synerbrix.co.ke",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Nairobi",
+"addressCountry": "KE"
+},
+"paymentAccepted": ["M-Pesa", "Bank Transfer"],
+"priceRange": "$$",
+"openingHours": "Mo-Fr 08:00-18:00",
+"sameAs": [
+"https://wa.me/254732832849"
+]
+}
+</script>
+<!-- ===== EXTERNAL CSS (CDN) ===== -->
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)" />
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+<link href="[https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap](https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap)" rel="stylesheet" />
+<!-- FontAwesome 6 -->
+<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)" />
+<!-- ===== LOCAL STYLES ===== -->
+<link rel="stylesheet" href="style.css?v=3" />
+<style>
+.hero-main-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 0 0 12px 12px;
+display: block;
+}
+.graphic-card .card-body {
+padding: 0 !important;
+overflow: hidden;
+}
+.graphic-card .card-header {
+padding: 12px 20px;
+}
+.guarantee-badge {
+background-color: rgba(16, 185, 129, 0.1);
+color: #10B981;
+padding: 6px 14px;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+}
+.stats-bar {
+background: #0f172a;
+color: #ffffff;
+padding: 30px 0;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+text-align: center;
+}
+.stat-item h3 {
+font-size: 2.2rem;
+color: #38bdf8;
+margin-bottom: 5px;
+font-weight: 800;
+}
+.stat-item p {
+font-size: 0.9rem;
+color: #94a3b8;
+margin: 0;
+}
+.badge-trust {
+display: inline-block;
+background: #e0f2fe;
+color: #0369a1;
+font-size: 0.8rem;
+font-weight: 700;
+padding: 4px 10px;
+border-radius: 4px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 10px;
+}
+.cta-microcopy {
+font-size: 0.8rem;
+color: #94a3b8;
+margin-top: 8px;
+text-align: center;
+}
+/* ===== TESTIMONIALS STYLING ===== */
+.testimonials-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 24px;
+}
+.testimonial-card {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 28px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+.testimonial-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 16px;
+}
+.testimonial-stars {
+color: #f59e0b;
+font-size: 0.9rem;
+}
+.verified-tag {
+font-size: 0.75rem;
+background: #f0fdf4;
+color: #16a34a;
+border: 1px solid #bbf7d0;
+padding: 2px 8px;
+border-radius: 12px;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 4px;
+}
+.testimonial-text {
+color: #334155;
+font-size: 0.95rem;
+line-height: 1.6;
+margin-bottom: 24px;
+font-style: italic;
+}
+.testimonial-author {
+display: flex;
+align-items: center;
+gap: 14px;
+border-top: 1px solid #f1f5f9;
+padding-top: 16px;
+}
+.author-avatar {
+width: 48px;
+height: 48px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid #e2e8f0;
+}
+.author-info h5 {
+margin: 0;
+font-size: 1rem;
+font-weight: 700;
+color: #0f172a;
+}
+.author-info span {
+font-size: 0.825rem;
+color: #64748b;
+display: block;
+}
+/* ===== FAQ ACCORDION STYLING ===== */
+.faq-accordion-container {
+max-width: 860px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+.faq-accordion-item {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 10px;
+overflow: hidden;
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-accordion-item:hover {
+border-color: #cbd5e1;
+}
+.faq-accordion-item[open] {
+border-color: #0ea5e9;
+box-shadow: 0 4px 14px rgba(14, 165, 233, 0.08);
+}
+.faq-summary {
+padding: 18px 24px;
+font-size: 1.05rem;
+font-weight: 700;
+color: #0f172a;
+cursor: pointer;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+user-select: none;
+}
+.faq-summary::-webkit-details-marker {
+display: none;
+}
+.faq-icon {
+color: #0ea5e9;
+transition: transform 0.3s ease;
+font-size: 0.9rem;
+}
+.faq-accordion-item[open] .faq-icon {
+transform: rotate(180deg);
+}
+.faq-content {
+padding: 0 24px 20px 24px;
+color: #475569;
+font-size: 0.95rem;
+line-height: 1.6;
+border-top: 1px solid #f1f5f9;
+margin-top: 4px;
+padding-top: 16px;
+}
+</style>
 </head>
 <body>
-
-    <!-- ===== PREMIUM PAGE LOADER ===== -->
-    <div class="page-loader" id="pageLoader">
-        <div style="text-align:center;">
-            <div class="spinner"></div>
-            <div class="loader-text">SYNERBRIX</div>
-        </div>
-    </div>
-
-    <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="top-contact">
-                <span><i class="fa-solid fa-phone"></i> Direct Support: <a href="tel:0732832849">0732 832 849</a></span>
-                <span class="divider">|</span>
-                <span><i class="fa-solid fa-shield-check"></i> On-Site &amp; Remote Response Across Nairobi &amp; Kenya</span>
-            </div>
-            <div class="top-badge">
-                <i class="fa-solid fa-money-bill-wave"></i> M-Pesa PayBill: <strong>400200</strong> (Acc: 0714202996)
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== STICKY NAVIGATION ===== -->
-    <header class="header" id="header">
-        <div class="container nav-container">
-            <a href="#home" class="logo" aria-label="Synerbrix Home">
-                <span class="logo-text">SYNERBRIX</span><span class="logo-dot">.</span>
-                <span class="logo-sub">LIMITED</span>
-            </a>
-
-            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#why-us" class="nav-link">Why Us</a></li>
-                    <li><a href="#who-we-serve" class="nav-link">Who We Serve</a></li>
-                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                    <li><a href="#how-it-works" class="nav-link">Process</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary nav-cta">Request Free Consultation</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- ===== HERO SECTION ===== -->
-        <section class="hero" id="home">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="pill-tag"><i class="fa-solid fa-bolt"></i> Single-Source Technology Partner</span>
-                    <h1 class="hero-title">Stop Losing Revenue &amp; Time to Technical Headaches.</h1>
-                    <p class="hero-subtitle">
-                        We design high-converting websites, deploy bulletproof networks, install crystal-clear 4K CCTV systems, and manage your IT support—so you can focus 100% on growing your business.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary btn-large">Get a Free Technical Audit <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="btn btn-whatsapp btn-large">
-                            <i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Inquiry
-                        </a>
-                    </div>
-
-                    <div class="hero-trust">
-                        <div class="trust-item"><i class="fa-solid fa-clock-rotate-left"></i> &lt; 2-Hour SLA Emergency Response</div>
-                        <div class="trust-item"><i class="fa-solid fa-file-invoice-dollar"></i> Transparent Fixed Pricing</div>
-                        <div class="trust-item"><i class="fa-solid fa-shield-check"></i> 100% Guaranteed Reliability</div>
-                    </div>
-                </div>
-
-                <div class="hero-graphic">
-                    <div class="graphic-card main-card">
-                        <div class="card-header">
-                            <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                            <span class="card-title">Synerbrix Operations Center</span>
-                        </div>
-                        <div class="card-body">
-                            <img class="hero-main-img" 
-                                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Modern IT infrastructure managed by Synerbrix Limited" 
-                                 loading="lazy" />
-                        </div>
-                    </div>
-                    <div class="floating-badge badge-1">
-                        <i class="fa-solid fa-circle-check" style="color: #10B981;"></i>
-                        <div>
-                            <strong>Zero Downtime Mindset</strong>
-                            <small>Proactive Monitoring &amp; Security</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== PROOF & IMPACT METRICS ===== -->
-        <section class="stats-bar">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>99.9%</h3>
-                        <p>System Uptime Delivered</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>&lt; 30 Mins</h3>
-                        <p>Average Initial Support Response</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100+</h3>
-                        <p>Successful Projects Deployed</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>1 Single</h3>
-                        <p>Accountable Partner &amp; Monthly Bill</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== PROBLEM / SOLUTION SECTION ===== -->
-        <section class="problem-solution section-padding">
-            <div class="container">
-                <div class="ps-grid">
-                    <div class="ps-box problem">
-                        <span class="ps-tag text-danger"><i class="fa-solid fa-circle-xmark"></i> The Frustration</span>
-                        <h3>Managing Multiple Vendors Is Ruining Your Efficiency</h3>
-                        <p>When your website goes down, your Wi-Fi freezes, or a security camera fails, uncoordinated vendors point fingers at each other while your business bleeds money and reputation.</p>
-                        <ul class="service-bullets" style="margin-top:15px; color:#ef4444;">
-                            <li><i class="fa-solid fa-xmark"></i> Unreliable freelancers disappearing mid-project</li>
-                            <li><i class="fa-solid fa-xmark"></i> Hidden setup fees and surprise maintenance bills</li>
-                            <li><i class="fa-solid fa-xmark"></i> Vulnerable hardware leaving sensitive business data exposed</li>
-                        </ul>
-                    </div>
-                    <div class="ps-box solution">
-                        <span class="ps-tag text-success"><i class="fa-solid fa-circle-check"></i> The Synerbrix Advantage</span>
-                        <h3>One Accountable Partner for Complete Digital Peace of Mind</h3>
-                        <p>Synerbrix handles your entire technology pipeline. From fast-loading websites and secure cloud software to physical network cabling and 24/7 CCTV surveillance.</p>
-                        <ul class="service-bullets" style="margin-top:15px; color:#10b981;">
-                            <li><i class="fa-solid fa-check"></i> Single point of contact for all technical inquiries</li>
-                            <li><i class="fa-solid fa-check"></i> Clear, itemized pricing upfront with zero surprises</li>
-                            <li><i class="fa-solid fa-check"></i> Enterprise-level security standards tailored to your budget</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== SERVICES SECTION ===== -->
-        <section class="services section-padding bg-light" id="services">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">END-TO-END CAPABILITIES</span>
-                    <h2>Engineered to Protect, Perform, and Scale</h2>
-                    <p>Select a individual service or combine them into a comprehensive managed IT package.</p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Service 1 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Web development and software applications" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <span class="badge-trust">High Conversion</span>
-                        <h3>Web &amp; Software Engineering</h3>
-                        <p>Turn web traffic into paying clients with ultra-fast, mobile-optimized websites and custom software solutions designed specifically to generate leads and sales.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> Custom Responsive Web Design</li>
-                            <li><i class="fa-solid fa-angle-right"></i> E-Commerce &amp; M-Pesa Integration</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Lead Generation &amp; SEO Optimization</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 2 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80" alt="Managed IT support services" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
-                        <span class="badge-trust">24/7 Availability</span>
-                        <h3>Managed IT Support &amp; Helpdesk</h3>
-                        <p>Eliminate workplace frustration with rapid remote and on-site assistance. We fix computer errors, optimize software, and perform proactive maintenance before issues disrupt work.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> On-Site &amp; Remote Technical Help</li>
-                            <li><i class="fa-solid fa-angle-right"></i> OS Cleanup &amp; Performance Tuning</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Automated Backup &amp; Data Recovery</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 3 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1558494949-ef526d0048ac?auto=format&fit=crop&w=600&q=80" alt="Structured network cabling and router configuration" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <span class="badge-trust">Enterprise Grade</span>
-                        <h3>Structured Cabling &amp; Networking</h3>
-                        <p>Fast, reliable local area networks (LAN) and seamless Wi-Fi coverage engineered to eliminate dead zones and maintain unbreakable connectivity across your facility.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> Clean Ethernet Cabling &amp; Patch Panels</li>
-                            <li><i class="fa-solid fa-angle-right"></i> High-Speed Managed Switches &amp; Routers</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Enterprise Access Point Deployment</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 4 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity protection and system auditing" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                        <span class="badge-trust">Proactive Protection</span>
-                        <h3>Cybersecurity &amp; Threat Defense</h3>
-                        <p>Protect confidential financial records and customer data against malware, ransomware, and unauthorized network breaches with robust security protocols.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> Vulnerability Assessments &amp; Audits</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Next-Gen Antivirus &amp; Firewall Rules</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Employee Phishing Awareness Training</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 5 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?auto=format&fit=crop&w=600&q=80" alt="Wi-Fi Hotspot Billing Systems" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
-                        <span class="badge-trust">Revenue Generating</span>
-                        <h3>Commercial &amp; Community Wi-Fi</h3>
-                        <p>Deploy custom Wi-Fi hotspots for apartments, estates, hotels, or public venues equipped with bandwidth management and automated M-Pesa billing setups.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> M-Pesa Paywall &amp; Voucher Systems</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Bandwidth &amp; User Speed Limiting</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Estate &amp; Business Campus Hotspots</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 6 -->
-                    <article class="service-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" alt="Computer repairs and hardware fleet upgrades" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-screwdrivers-fixed"></i></div>
-                        <span class="badge-trust">Hardware Longevity</span>
-                        <h3>Hardware Lifecycle &amp; Repairs</h3>
-                        <p>Extend the operating life of your office laptops, desktops, and servers through component upgrades, diagnostic deep cleans, and preventive servicing.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> SSD &amp; RAM Performance Upgrades</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Motherboard &amp; Power Supply Repairs</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Scheduled Fleet Maintenance</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 7 (CCTV) -->
-                    <article class="service-card highlight-card reveal">
-                        <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="4K HD CCTV surveillance camera installation" loading="lazy" />
-                        </div>
-                        <div class="service-icon"><i class="fa-solid fa-video"></i></div>
-                        <span class="badge-trust" style="background:#fef3c7; color:#b45309;">24/7 Remote Vision</span>
-                        <h3>4K CCTV &amp; Smart Surveillance</h3>
-                        <p>Monitor your premises live from anywhere in the world. We design, wire, and configure crystal-clear indoor/outdoor camera systems with night vision and smart motion alerts.</p>
-                        <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> IP &amp; HD Analog Camera Wiring</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Smartphone Live Stream Configuration</li>
-                            <li><i class="fa-solid fa-angle-right"></i> DVR/NVR Storage Setup &amp; Upgrades</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== WHY SYNERBRIX ===== -->
-        <section class="why-us section-padding" id="why-us">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">THE DIFFERENCE</span>
-                    <h2>Why Forward-Thinking Businesses Choose Synerbrix</h2>
-                    <p>We eliminate friction, jargon, and uncertainty from business technology.</p>
-                </div>
-
-                <div class="why-grid">
-                    <div class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-comments"></i></div>
-                        <h4>Clear, Jargon-Free Communication</h4>
-                        <p>We speak business outcomes, not obscure code. Every proposal, report, and recommendation is explained in plain language so you always make informed choices.</p>
-                    </div>
-                    <div class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <h4>Rapid On-Site &amp; Remote Support</h4>
-                        <p>Based in Nairobi, our response team is on standby to resolve critical system halts via secure remote connection or fast on-site dispatch.</p>
-                    </div>
-                    <div class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                        <h4>Pragmatic, Budget-Conscious Solutions</h4>
-                        <p>We never push overpriced hardware or unnecessary upgrades. We assess your exact needs and recommend scalable solutions that offer maximum ROI.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== WHO WE SERVE ===== -->
-        <section class="who-we-serve section-padding bg-light" id="who-we-serve">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">TAILORED DOMAIN EXPERTISE</span>
-                    <h2>Customized Tech Infrastructure for Every Sector</h2>
-                    <p>From growing enterprises to specialized institutions, we customize our tech delivery.</p>
-                </div>
-
-                <div class="audience-grid">
-                    <div class="audience-card reveal">
-                        <div class="audience-icon"><i class="fa-solid fa-building-user"></i></div>
-                        <h4>Growing SMEs</h4>
-                        <p>Boost credibility with modern web platforms and safeguard daily workflow with managed internal IT support.</p>
-                    </div>
-                    <div class="audience-card reveal">
-                        <div class="audience-icon"><i class="fa-solid fa-school"></i></div>
-                        <h4>Schools &amp; Academies</h4>
-                        <p>Maintain safe computer labs, campus-wide administrative Wi-Fi, and secure student records management.</p>
-                    </div>
-                    <div class="audience-card reveal">
-                        <div class="audience-icon"><i class="fa-solid fa-sitemap"></i></div>
-                        <h4>Corporate Offices</h4>
-                        <p>Robust server networks, redundant data backups, strict cybersecurity policies, and 4K perimeter security.</p>
-                    </div>
-                    <div class="audience-card reveal">
-                        <div class="audience-icon"><i class="fa-solid fa-store"></i></div>
-                        <h4>Retail &amp; Real Estate</h4>
-                        <p>Deploy guest Wi-Fi hotspots with automated M-Pesa billing, POS networking, and remote premises monitoring.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== TESTIMONIALS & TRUST (NEW CONVERSION SECTION) ===== -->
-        <section class="testimonials section-padding" id="testimonials">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">CLIENT SUCCESS</span>
-                    <h2>Trusted by Local Business Owners</h2>
-                    <p>Here is what our clients say about our response times, technical quality, and overall service.</p>
-                </div>
-
-                <div class="why-grid">
-                    <div class="why-card reveal" style="border: 1px solid #e2e8f0; background:#fff;">
-                        <div style="color: #f59e0b; margin-bottom: 12px;">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p style="font-style: italic; color: #475569; margin-bottom: 20px;">
-                            "Synerbrix revamped our entire office network and installed a 12-camera CCTV system. The ability to monitor our warehouse live from our phones gives us total peace of mind."
-                        </p>
-                        <h5 style="margin: 0; font-weight: 700;">Operations Director</h5>
-                        <small style="color: #64748b;">Logistics &amp; Distribution Firm, Nairobi</small>
-                    </div>
-
-                    <div class="why-card reveal" style="border: 1px solid #e2e8f0; background:#fff;">
-                        <div style="color: #f59e0b; margin-bottom: 12px;">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p style="font-style: italic; color: #475569; margin-bottom: 20px;">
-                            "Our new corporate website generated double the client inquiries in the first month. Synerbrix delivered the exact design we wanted on time and within our agreed budget."
-                        </p>
-                        <h5 style="margin: 0; font-weight: 700;">Managing Partner</h5>
-                        <small style="color: #64748b;">Consulting Agency, CBD Nairobi</small>
-                    </div>
-
-                    <div class="why-card reveal" style="border: 1px solid #e2e8f0; background:#fff;">
-                        <div style="color: #f59e0b; margin-bottom: 12px;">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p style="font-style: italic; color: #475569; margin-bottom: 20px;">
-                            "Having one team handle our computer maintenance, internet router configuration, and web hosting saves us hours every month. Their WhatsApp response speed is phenomenal."
-                        </p>
-                        <h5 style="margin: 0; font-weight: 700;">School Administrator</h5>
-                        <small style="color: #64748b;">Private Primary Academy, Kiambu</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== HOW WE WORK ===== -->
-        <section class="how-it-works section-padding bg-light" id="how-it-works">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">OUR PROVEN PROCESS</span>
-                    <h2>Four Steps to Frictionless Technology</h2>
-                    <p>A transparent road map designed to deliver clear deliverables on time.</p>
-                </div>
-
-                <div class="process-steps">
-                    <div class="step-card reveal">
-                        <div class="step-number">01</div>
-                        <h4>Initial Audit &amp; Discovery</h4>
-                        <p>We analyze your current setup, discuss business pain points, and assess requirements on-site or via call.</p>
-                    </div>
-                    <div class="step-card reveal">
-                        <div class="step-number">02</div>
-                        <h4>Tailored Scope &amp; Quote</h4>
-                        <p>We deliver an itemized proposal with transparent costs, clear project timelines, and guaranteed SLAs.</p>
-                    </div>
-                    <div class="step-card reveal">
-                        <div class="step-number">03</div>
-                        <h4>Implementation &amp; Testing</h4>
-                        <p>Our engineers deploy software or hardware setups cleanly, testing rigorous failure controls before sign-off.</p>
-                    </div>
-                    <div class="step-card reveal">
-                        <div class="step-number">04</div>
-                        <h4>Ongoing Support &amp; Maintenance</h4>
-                        <p>We monitor performance, handle system updates, and remain available for immediate assistance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== ABOUT / TRUST ===== -->
-        <section class="about-summary section-padding" id="about">
-            <div class="container about-container">
-                <div class="about-text">
-                    <span class="section-subtitle">ABOUT SYNERBRIX</span>
-                    <h2>We believe business technology should produce results—not extra workload.</h2>
-                    <p class="lead-text">Synerbrix Limited was established to end the frustration of fragmented IT management in Kenya. We bridge the gap between complex engineering and practical everyday business operations.</p>
-                    <p>Whether configuring high-density Wi-Fi networks, building custom web platforms, or securing commercial facilities with CCTV, our team brings clean workmanship, prompt responsiveness, and complete integrity to every project.</p>
-
-                    <div class="payment-trust-box">
-                        <h5><i class="fa-solid fa-wallet"></i> Verified Corporate Payment Details</h5>
-                        <p>All projects are officially invoiced. Secure payments are accepted via M‑Pesa PayBill or direct Bank Transfer:</p>
-                        <div class="mpesa-details">
-                            <div><strong>M-Pesa PayBill:</strong> 400200</div>
-                            <div><strong>Account Number:</strong> 0714202996</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card reveal">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Synerbrix team working on client solutions" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:1rem;" />
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>100%</h3>
-                        <p>Accountability Guarantee</p>
-                    </div>
-                    <div class="stat-card reveal">
-                        <i class="fa-solid fa-headset"></i>
-                        <h3>Fast SLA</h3>
-                        <p>Rapid Incident Dispatch</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== FREQUENTLY ASKED QUESTIONS ===== -->
-        <section class="faq-section section-padding bg-light" id="faq">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">TRANSPARENCY FIRST</span>
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Clear answers to help you make an informed decision about your business technology.</p>
-                </div>
-                <div class="faq-grid">
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> How fast can you respond to an emergency IT outage?</h4>
-                        <p>For urgent operational breakdowns within Nairobi, our remote team responds within 15–30 minutes, and on-site dispatches arrive within 2 hours depending on your service level agreement (SLA).</p>
-                    </div>
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> How much does a website design or custom software cost?</h4>
-                        <p>Pricing is project-based depending on feature complexity, integrations (such as M-Pesa or custom databases), and total page count. We issue a transparent, fixed quote upfront so you face zero surprise billing.</p>
-                    </div>
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> Can I view my CCTV security cameras remotely on my smartphone?</h4>
-                        <p>Yes. All CCTV installations include secure remote access configuration on iOS and Android devices, allowing you to view live HD footage and receive motion alerts wherever you have internet.</p>
-                    </div>
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> Do you offer hardware warranties for CCTV and network equipment?</h4>
-                        <p>Yes. All hardware equipment supplied by Synerbrix carries original manufacturer warranties (typically 1 to 3 years) alongside our service guarantee on cabling and labor workmanship.</p>
-                    </div>
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> How do estate or commercial Wi-Fi hotspot billing systems work?</h4>
-                        <p>We deploy managed routers and access points integrated with automated M-Pesa payment gateways. Users select time/data packages, pay via M-Pesa, and automatically receive instant internet access credentials.</p>
-                    </div>
-                    <div class="faq-item reveal">
-                        <h4><i class="fa-solid fa-circle-question"></i> Can we retain Synerbrix on a monthly managed IT retainer?</h4>
-                        <p>Yes. We offer customized monthly IT retainer packages for ongoing office support, network management, server backups, and website maintenance at a predictable monthly fee.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== HIGH-CONVERSION CONTACT & QUOTE FORM ===== -->
-        <section class="contact-section section-padding bg-dark text-white" id="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <span class="section-subtitle text-accent">GET STARTED TODAY</span>
-                        <h2>Ready to Upgrade Your Technology Infrastructure?</h2>
-                        <p>Reach out now for a free, zero-obligation proposal. Our technical experts are ready to review your project requirements.</p>
-
-                        <div class="info-items">
-                            <div class="info-item">
-                                <i class="fa-solid fa-phone"></i>
-                                <div>
-                                    <h5>Call / Direct Support Line</h5>
-                                    <p><a href="tel:0732832849" class="text-white">0732 832 849</a></p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <div>
-                                    <h5>Instant WhatsApp Chat</h5>
-                                    <p><a href="https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20need%20a%20quote." target="_blank" class="text-accent">Click to Chat Directly</a></p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div>
-                                    <h5>Official Email Inquiries</h5>
-                                    <p><a href="mailto:info@synerbrix.co.ke" class="text-white">info@synerbrix.co.ke</a></p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fa-solid fa-receipt"></i>
-                                <div>
-                                    <h5>Verified Business Payment</h5>
-                                    <p>M-Pesa PayBill: <strong>400200</strong> | Account: <strong>0714202996</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-card">
-                        <h3>Request Your Free Technical Quote</h3>
-                        <p style="color:#64748b; font-size:0.9rem; margin-bottom:20px;">Fill in your details and our lead technician will contact you within 2 business hours.</p>
-
-                        <form id="quote-form" novalidate>
-                            <div class="form-group">
-                                <label for="fullName">Full Name / Business Name</label>
-                                <input type="text" id="fullName" class="form-input" placeholder="e.g. Isack Kibet / Business Ltd" required />
-                                <span class="error-msg" id="nameError">Please enter your name or company.</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number / WhatsApp</label>
-                                <input type="tel" id="phone" class="form-input" placeholder="07XX XXX XXX" required />
-                                <span class="error-msg" id="phoneError">Please enter a valid phone number.</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="service">Service Required</label>
-                                <select id="service" class="form-input" required>
-                                    <option value="">Select a service category...</option>
-                                    <option value="web">Web &amp; Custom Software Engineering</option>
-                                    <option value="it">Managed IT Support &amp; Maintenance</option>
-                                    <option value="networking">Structured Networking &amp; Enterprise Wi-Fi</option>
-                                    <option value="cybersecurity">Cybersecurity Audit &amp; Threat Defense</option>
-                                    <option value="cctv">4K HD CCTV Surveillance System</option>
-                                    <option value="hotspot">Community / Estate Wi-Fi Hotspot Billing</option>
-                                    <option value="hardware">Hardware Diagnostics &amp; Fleet Repair</option>
-                                </select>
-                                <span class="error-msg" id="serviceError">Please select a service.</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Project Overview / Key Requirements</label>
-                                <textarea id="message" class="form-input" rows="4" placeholder="Briefly describe your objectives, timeline, or current technical issues..." required></textarea>
-                                <span class="error-msg" id="messageError">Please enter brief project details.</span>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block">
-                                Submit Quote Request <i class="fa-solid fa-paper-plane"></i>
-                            </button>
-                            <p class="cta-microcopy"><i class="fa-solid fa-lock"></i> Privacy Guaranteed. No spam or unrequested calls.</p>
-                        </form>
-
-                        <div id="formSuccess" class="form-success">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <p>Thank you! Your inquiry has been received. A Synerbrix specialist will reach out shortly.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-col brand-col">
-                <a href="#home" class="logo logo-light">
-                    <span class="logo-text">SYNERBRIX</span><span class="logo-dot">.</span>
-                </a>
-                <p>Digital &amp; Technical Infrastructure Solutions.<br />Web • IT • Networking • Security • CCTV • Connectivity</p>
-            </div>
-            <div class="footer-col">
-                <h5>Core Solutions</h5>
-                <ul>
-                    <li><a href="#services">Web &amp; Software Design</a></li>
-                    <li><a href="#services">Managed IT Support</a></li>
-                    <li><a href="#services">Structured Cabling</a></li>
-                    <li><a href="#services">Cybersecurity Audits</a></li>
-                    <li><a href="#services">4K CCTV Systems</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Quick Navigation</h5>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#why-us">Why Us</a></li>
-                    <li><a href="#who-we-serve">Who We Serve</a></li>
-                    <li><a href="#testimonials">Client Reviews</a></li>
-                    <li><a href="#how-it-works">Process</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Corporate Payment</h5>
-                <div class="mpesa-highlight">
-                    <p style="margin:0;">M‑Pesa PayBill: <strong>400200</strong><br />Account: <strong>0714202996</strong></p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container text-center">
-                <p>&copy; 2026 Synerbrix Limited. All Rights Reserved. Reliable • Secure • Scalable</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== EXTERNAL JAVASCRIPT (CDN) ===== -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-
-    <!-- ===== LOCAL JAVASCRIPT ===== -->
-    <script src="script.js" defer></script>
-
+<!-- ===== PREMIUM PAGE LOADER ===== -->
+<div class="page-loader" id="pageLoader">
+<div style="text-align:center;">
+<div class="spinner"></div>
+<div class="loader-text">SYNERBRIX</div>
+</div>
+</div>
+<!-- ===== TOP ANNOUNCEMENT BAR ===== -->
+<div class="top-bar">
+<div class="container top-bar-content">
+<div class="top-contact">
+<span><i class="fa-solid fa-phone"></i> Direct Support: <a href="tel:0732832849">0732 832 849</a></span>
+<span class="divider">|</span>
+<span><i class="fa-solid fa-shield-check"></i> On-Site & Remote Response Across Nairobi & Kenya</span>
+</div>
+<div class="top-badge">
+<i class="fa-solid fa-money-bill-wave"></i> M-Pesa PayBill: <strong>400200</strong> (Acc: 0714202996)
+</div>
+</div>
+</div>
+<!-- ===== STICKY NAVIGATION ===== -->
+<header class="header" id="header">
+<div class="container nav-container">
+<a href="#home" class="logo" aria-label="Synerbrix Home">
+<span class="logo-text">SYNERBRIX</span><span class="logo-dot">.</span>
+<span class="logo-sub">LIMITED</span>
+</a>
+<nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+<ul class="nav-list">
+<li><a href="#home" class="nav-link active">Home</a></li>
+<li><a href="#services" class="nav-link">Services</a></li>
+<li><a href="#why-us" class="nav-link">Why Us</a></li>
+<li><a href="#who-we-serve" class="nav-link">Who We Serve</a></li>
+<li><a href="#testimonials" class="nav-link">Reviews</a></li>
+<li><a href="#how-it-works" class="nav-link">Process</a></li>
+<li><a href="#faq" class="nav-link">FAQ</a></li>
+<li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+<div class="nav-actions">
+<a href="#contact" class="btn btn-primary nav-cta">Request Free Consultation</a>
+<button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+<i class="fa-solid fa-bars"></i>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+<div class="container hero-container">
+<div class="hero-content">
+<span class="pill-tag"><i class="fa-solid fa-bolt"></i> Single-Source Technology Partner</span>
+<h1 class="hero-title">Stop Losing Revenue & Time to Technical Headaches.</h1>
+<p class="hero-subtitle">
+We design high-converting websites, deploy bulletproof networks, install crystal-clear 4K CCTV systems, and manage your IT support—so you can focus 100% on growing your business.
+</p>
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary btn-large">Get a Free Technical Audit <i class="fa-solid fa-arrow-right"></i></a>
+<a href="[https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20would%20like%20to%20inquire%20about%20your%20services](https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20would%20like%20to%20inquire%20about%20your%20services)." target="_blank" class="btn btn-whatsapp btn-large">
+<i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Inquiry
+</a>
+</div>
+<div class="hero-trust">
+<div class="trust-item"><i class="fa-solid fa-clock-rotate-left"></i> < 2-Hour SLA Emergency Response</div>
+<div class="trust-item"><i class="fa-solid fa-file-invoice-dollar"></i> Transparent Fixed Pricing</div>
+<div class="trust-item"><i class="fa-solid fa-shield-check"></i> 100% Guaranteed Reliability</div>
+</div>
+</div>
+<div class="hero-graphic">
+<div class="graphic-card main-card">
+<div class="card-header">
+<div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+<span class="card-title">Synerbrix Operations Center</span>
+</div>
+<div class="card-body">
+<img class="hero-main-img" 
+src="[https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80)" 
+alt="Modern IT infrastructure managed by Synerbrix Limited" 
+loading="lazy" />
+</div>
+</div>
+<div class="floating-badge badge-1">
+<i class="fa-solid fa-circle-check" style="color: #10B981;"></i>
+<div>
+<strong>Zero Downtime Mindset</strong>
+<small>Proactive Monitoring & Security</small>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PROOF & IMPACT METRICS ===== -->
+<section class="stats-bar">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item">
+<h3>99.9%</h3>
+<p>System Uptime Delivered</p>
+</div>
+<div class="stat-item">
+<h3>< 30 Mins</h3>
+<p>Average Initial Support Response</p>
+</div>
+<div class="stat-item">
+<h3>100+</h3>
+<p>Successful Projects Deployed</p>
+</div>
+<div class="stat-item">
+<h3>1 Single</h3>
+<p>Accountable Partner & Monthly Bill</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PROBLEM / SOLUTION SECTION ===== -->
+<section class="problem-solution section-padding">
+<div class="container">
+<div class="ps-grid">
+<div class="ps-box problem">
+<span class="ps-tag text-danger"><i class="fa-solid fa-circle-xmark"></i> The Frustration</span>
+<h3>Managing Multiple Vendors Is Ruining Your Efficiency</h3>
+<p>When your website goes down, your Wi-Fi freezes, or a security camera fails, uncoordinated vendors point fingers at each other while your business bleeds money and reputation.</p>
+<ul class="service-bullets" style="margin-top:15px; color:#ef4444;">
+<li><i class="fa-solid fa-xmark"></i> Unreliable freelancers disappearing mid-project</li>
+<li><i class="fa-solid fa-xmark"></i> Hidden setup fees and surprise maintenance bills</li>
+<li><i class="fa-solid fa-xmark"></i> Vulnerable hardware leaving sensitive business data exposed</li>
+</ul>
+</div>
+<div class="ps-box solution">
+<span class="ps-tag text-success"><i class="fa-solid fa-circle-check"></i> The Synerbrix Advantage</span>
+<h3>One Accountable Partner for Complete Digital Peace of Mind</h3>
+<p>Synerbrix handles your entire technology pipeline. From fast-loading websites and secure cloud software to physical network cabling and 24/7 CCTV surveillance.</p>
+<ul class="service-bullets" style="margin-top:15px; color:#10b981;">
+<li><i class="fa-solid fa-check"></i> Single point of contact for all technical inquiries</li>
+<li><i class="fa-solid fa-check"></i> Clear, itemized pricing upfront with zero surprises</li>
+<li><i class="fa-solid fa-check"></i> Enterprise-level security standards tailored to your budget</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== SERVICES SECTION ===== -->
+<section class="services section-padding bg-light" id="services">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">END-TO-END CAPABILITIES</span>
+<h2>Engineered to Protect, Perform, and Scale</h2>
+<p>Select an individual service or combine them into a comprehensive managed IT package.</p>
+</div>
+<div class="services-grid">
+<!-- Service 1 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80)" alt="Web development and software applications" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+<span class="badge-trust">High Conversion</span>
+<h3>Web & Software Engineering</h3>
+<p>Turn web traffic into paying clients with ultra-fast, mobile-optimized websites and custom software solutions designed specifically to generate leads and sales.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> Custom Responsive Web Design</li>
+<li><i class="fa-solid fa-angle-right"></i> E-Commerce & M-Pesa Integration</li>
+<li><i class="fa-solid fa-angle-right"></i> Lead Generation & SEO Optimization</li>
+</ul>
+</article>
+<!-- Service 2 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80)" alt="Managed IT support services" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+<span class="badge-trust">24/7 Availability</span>
+<h3>Managed IT Support & Helpdesk</h3>
+<p>Eliminate workplace frustration with rapid remote and on-site assistance. We fix computer errors, optimize software, and perform proactive maintenance before issues disrupt work.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> On-Site & Remote Technical Help</li>
+<li><i class="fa-solid fa-angle-right"></i> OS Cleanup & Performance Tuning</li>
+<li><i class="fa-solid fa-angle-right"></i> Automated Backup & Data Recovery</li>
+</ul>
+</article>
+<!-- Service 3 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1558494949-ef526d0048ac?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1558494949-ef526d0048ac?auto=format&fit=crop&w=600&q=80)" alt="Structured network cabling and router configuration" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+<span class="badge-trust">Enterprise Grade</span>
+<h3>Structured Cabling & Networking</h3>
+<p>Fast, reliable local area networks (LAN) and seamless Wi-Fi coverage engineered to eliminate dead zones and maintain unbreakable connectivity across your facility.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> Clean Ethernet Cabling & Patch Panels</li>
+<li><i class="fa-solid fa-angle-right"></i> High-Speed Managed Switches & Routers</li>
+<li><i class="fa-solid fa-angle-right"></i> Enterprise Access Point Deployment</li>
+</ul>
+</article>
+<!-- Service 4 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80)" alt="Cybersecurity protection and system auditing" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
+<span class="badge-trust">Proactive Protection</span>
+<h3>Cybersecurity & Threat Defense</h3>
+<p>Protect confidential financial records and customer data against malware, ransomware, and unauthorized network breaches with robust security protocols.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> Vulnerability Assessments & Audits</li>
+<li><i class="fa-solid fa-angle-right"></i> Next-Gen Antivirus & Firewall Rules</li>
+<li><i class="fa-solid fa-angle-right"></i> Employee Phishing Awareness Training</li>
+</ul>
+</article>
+<!-- Service 5 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?auto=format&fit=crop&w=600&q=80)" alt="Wi-Fi Hotspot Billing Systems" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
+<span class="badge-trust">Revenue Generating</span>
+<h3>Commercial & Community Wi-Fi</h3>
+<p>Deploy custom Wi-Fi hotspots for apartments, estates, hotels, or public venues equipped with bandwidth management and automated M-Pesa billing setups.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> M-Pesa Paywall & Voucher Systems</li>
+<li><i class="fa-solid fa-angle-right"></i> Bandwidth & User Speed Limiting</li>
+<li><i class="fa-solid fa-angle-right"></i> Estate & Business Campus Hotspots</li>
+</ul>
+</article>
+<!-- Service 6 -->
+<article class="service-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80)" alt="Computer repairs and hardware fleet upgrades" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-screwdrivers-fixed"></i></div>
+<span class="badge-trust">Hardware Longevity</span>
+<h3>Hardware Lifecycle & Repairs</h3>
+<p>Extend the operating life of your office laptops, desktops, and servers through component upgrades, diagnostic deep cleans, and preventive servicing.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> SSD & RAM Performance Upgrades</li>
+<li><i class="fa-solid fa-angle-right"></i> Motherboard & Power Supply Repairs</li>
+<li><i class="fa-solid fa-angle-right"></i> Scheduled Fleet Maintenance</li>
+</ul>
+</article>
+<!-- Service 7 (CCTV) -->
+<article class="service-card highlight-card reveal">
+<div class="service-img-wrap">
+<img class="service-img" src="[https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80)" alt="4K HD CCTV surveillance camera installation" loading="lazy" />
+</div>
+<div class="service-icon"><i class="fa-solid fa-video"></i></div>
+<span class="badge-trust" style="background:#fef3c7; color:#b45309;">24/7 Remote Vision</span>
+<h3>4K CCTV & Smart Surveillance</h3>
+<p>Monitor your premises live from anywhere in the world. We design, wire, and configure crystal-clear indoor/outdoor camera systems with night vision and smart motion alerts.</p>
+<ul class="service-bullets">
+<li><i class="fa-solid fa-angle-right"></i> IP & HD Analog Camera Wiring</li>
+<li><i class="fa-solid fa-angle-right"></i> Smartphone Live Stream Configuration</li>
+<li><i class="fa-solid fa-angle-right"></i> DVR/NVR Storage Setup & Upgrades</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<!-- ===== WHY SYNERBRIX ===== -->
+<section class="why-us section-padding" id="why-us">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">THE DIFFERENCE</span>
+<h2>Why Forward-Thinking Businesses Choose Synerbrix</h2>
+<p>We eliminate friction, jargon, and uncertainty from business technology.</p>
+</div>
+<div class="why-grid">
+<div class="why-card reveal">
+<div class="why-icon"><i class="fa-solid fa-comments"></i></div>
+<h4>Clear, Jargon-Free Communication</h4>
+<p>We speak business outcomes, not obscure code. Every proposal, report, and recommendation is explained in plain language so you always make informed choices.</p>
+</div>
+<div class="why-card reveal">
+<div class="why-icon"><i class="fa-solid fa-location-dot"></i></div>
+<h4>Rapid On-Site & Remote Support</h4>
+<p>Based in Nairobi, our response team is on standby to resolve critical system halts via secure remote connection or fast on-site dispatch.</p>
+</div>
+<div class="why-card reveal">
+<div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+<h4>Pragmatic, Budget-Conscious Solutions</h4>
+<p>We never push overpriced hardware or unnecessary upgrades. We assess your exact needs and recommend scalable solutions that offer maximum ROI.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== WHO WE SERVE ===== -->
+<section class="who-we-serve section-padding bg-light" id="who-we-serve">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">TAILORED DOMAIN EXPERTISE</span>
+<h2>Customized Tech Infrastructure for Every Sector</h2>
+<p>From growing enterprises to specialized institutions, we customize our tech delivery.</p>
+</div>
+<div class="audience-grid">
+<div class="audience-card reveal">
+<div class="audience-icon"><i class="fa-solid fa-building-user"></i></div>
+<h4>Growing SMEs</h4>
+<p>Boost credibility with modern web platforms and safeguard daily workflow with managed internal IT support.</p>
+</div>
+<div class="audience-card reveal">
+<div class="audience-icon"><i class="fa-solid fa-school"></i></div>
+<h4>Schools & Academies</h4>
+<p>Maintain safe computer labs, campus-wide administrative Wi-Fi, and secure student records management.</p>
+</div>
+<div class="audience-card reveal">
+<div class="audience-icon"><i class="fa-solid fa-sitemap"></i></div>
+<h4>Corporate Offices</h4>
+<p>Robust server networks, redundant data backups, strict cybersecurity policies, and 4K perimeter security.</p>
+</div>
+<div class="audience-card reveal">
+<div class="audience-icon"><i class="fa-solid fa-store"></i></div>
+<h4>Retail & Real Estate</h4>
+<p>Deploy guest Wi-Fi hotspots with automated M-Pesa billing, POS networking, and remote premises monitoring.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== CLIENT TESTIMONIALS SECTION ===== -->
+<section class="testimonials section-padding" id="testimonials">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">CLIENT SUCCESS & REVIEWS</span>
+<h2>Trusted by Kenyan Business Leaders</h2>
+<p>Read how Synerbrix helps enterprises, institutions, and retail brands maintain zero downtime and scale faster.</p>
+</div>
+<div class="testimonials-grid">
+<!-- Testimonial 1 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"Synerbrix revamped our entire office network and installed a 12-camera CCTV system across our main facility. The ability to monitor our warehouse live from our phones gives us total peace of mind. Their cabling work is extraordinarily clean!"
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80)" alt="Operations Director" class="author-avatar" />
+<div class="author-info">
+<h5>Sarah Wanjiku</h5>
+<span>Operations Director, FreightLog Kenya</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"Our new corporate website generated double the client inquiries in the very first month. Synerbrix delivered the exact responsive design and seamless M-Pesa integration we wanted on time and strictly within our agreed budget."
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80)" alt="Managing Partner" class="author-avatar" />
+<div class="author-info">
+<h5>David Ochieng</h5>
+<span>Managing Partner, Apex Legal Consultancy</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"Having one single accountable partner handle our computer maintenance, Wi-Fi router setup, and web hosting saves us endless hours every month. Their WhatsApp support response speed in Nairobi is phenomenal."
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80)" alt="School Administrator" class="author-avatar" />
+<div class="author-info">
+<h5>Grace Mutua</h5>
+<span>Administrator, BrightStart Primary Academy</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"We deployed Synerbrix's automated M-Pesa Wi-Fi hotspot solution for our 45-unit apartment block in Imara Daima. Residents pay seamlessly, bandwidth limits work reliably, and monthly passive revenue is managed hands-off."
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80)" alt="Property Developer" class="author-avatar" />
+<div class="author-info">
+<h5>Kelvin Maina</h5>
+<span>Property Manager, Skyline Heights Apartments</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 5 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"When our main server suffered a severe ransomware threat last year, Synerbrix stepped in within an hour. They restored our sanitized backups without data loss and locked down our perimeter network. True professionals."
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80)" alt="Finance Director" class="author-avatar" />
+<div class="author-info">
+<h5>James Kiptoo</h5>
+<span>Head of Finance, Narok Commerce Group</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 6 -->
+<div class="testimonial-card reveal">
+<div>
+<div class="testimonial-header">
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
+</div>
+<p class="testimonial-text">
+"The team upgraded our entire workstation fleet with SSDs and expanded RAM, doubling computer speeds at a fraction of the cost of buying new machines. Transparent itemized invoices every step of the way!"
+</p>
+</div>
+<div class="testimonial-author">
+<img src="[https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80](https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80)" alt="General Manager" class="author-avatar" />
+<div class="author-info">
+<h5>Amina Hassan</h5>
+<span>General Manager, Redwood Hospitality</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== HOW WE WORK ===== -->
+<section class="how-it-works section-padding bg-light" id="how-it-works">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">OUR PROVEN PROCESS</span>
+<h2>Four Steps to Frictionless Technology</h2>
+<p>A transparent road map designed to deliver clear deliverables on time.</p>
+</div>
+<div class="process-steps">
+<div class="step-card reveal">
+<div class="step-number">01</div>
+<h4>Initial Audit & Discovery</h4>
+<p>We analyze your current setup, discuss business pain points, and assess requirements on-site or via call.</p>
+</div>
+<div class="step-card reveal">
+<div class="step-number">02</div>
+<h4>Tailored Scope & Quote</h4>
+<p>We deliver an itemized proposal with transparent costs, clear project timelines, and guaranteed SLAs.</p>
+</div>
+<div class="step-card reveal">
+<div class="step-number">03</div>
+<h4>Implementation & Testing</h4>
+<p>Our engineers deploy software or hardware setups cleanly, testing rigorous failure controls before sign-off.</p>
+</div>
+<div class="step-card reveal">
+<div class="step-number">04</div>
+<h4>Ongoing Support & Maintenance</h4>
+<p>We monitor performance, handle system updates, and remain available for immediate assistance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== ABOUT / TRUST ===== -->
+<section class="about-summary section-padding" id="about">
+<div class="container about-container">
+<div class="about-text">
+<span class="section-subtitle">ABOUT SYNERBRIX</span>
+<h2>We believe business technology should produce results—not extra workload.</h2>
+<p class="lead-text">Synerbrix Limited was established to end the frustration of fragmented IT management in Kenya. We bridge the gap between complex engineering and practical everyday business operations.</p>
+<p>Whether configuring high-density Wi-Fi networks, building custom web platforms, or securing commercial facilities with CCTV, our team brings clean workmanship, prompt responsiveness, and complete integrity to every project.</p>
+<div class="payment-trust-box">
+<h5><i class="fa-solid fa-wallet"></i> Verified Corporate Payment Details</h5>
+<p>All projects are officially invoiced. Secure payments are accepted via M‑Pesa PayBill or direct Bank Transfer:</p>
+<div class="mpesa-details">
+<div><strong>M-Pesa PayBill:</strong> 400200</div>
+<div><strong>Account Number:</strong> 0714202996</div>
+</div>
+</div>
+</div>
+<div class="about-stats">
+<div class="stat-card reveal">
+<img src="[https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80](https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80)" alt="Synerbrix team working on client solutions" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:1rem;" />
+<i class="fa-solid fa-shield-halved"></i>
+<h3>100%</h3>
+<p>Accountability Guarantee</p>
+</div>
+<div class="stat-card reveal">
+<i class="fa-solid fa-headset"></i>
+<h3>Fast SLA</h3>
+<p>Rapid Incident Dispatch</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== FREQUENTLY ASKED QUESTIONS SECTION ===== -->
+<section class="faq-section section-padding bg-light" id="faq">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-subtitle">TRANSPARENCY FIRST</span>
+<h2>Frequently Asked Questions</h2>
+<p>Clear, direct answers to help you make an informed decision about your business technology.</p>
+</div>
+<div class="faq-accordion-container">
+<!-- FAQ 1 -->
+<details class="faq-accordion-item reveal" open>
+<summary class="faq-summary">
+<span><i class="fa-solid fa-clock text-accent" style="margin-right:10px;"></i> How fast can you respond to emergency IT outages or network failures?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+For urgent operational breakdowns within Nairobi and surrounding regions, our remote helpdesk initiates troubleshooting within <strong>15–30 minutes</strong>. If on-site technician dispatch is required, our emergency response team arrives within <strong>2 hours</strong> under our standard Service Level Agreement (SLA).
+</div>
+</details>
+<!-- FAQ 2 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-calculator text-accent" style="margin-right:10px;"></i> How much does a website design or custom web software cost?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+Pricing is transparent and project-based depending on your scope, page count, and functional requirements (such as M-Pesa payment gateways, customer portals, or database management). Following a free technical consultation, we deliver a fixed itemized quote upfront with <strong>zero hidden fees</strong>.
+</div>
+</details>
+<!-- FAQ 3 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-video text-accent" style="margin-right:10px;"></i> Can I view my CCTV security cameras remotely on my mobile phone?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+Yes, absolutely. All 4K and HD CCTV installations by Synerbrix include secure remote access configuration on iOS and Android smartphones, tablets, and computers. You can stream live footage, review recorded history, and receive motion detection push alerts anytime, anywhere.
+</div>
+</details>
+<!-- FAQ 4 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-wifi text-accent" style="margin-right:10px;"></i> How does commercial Wi-Fi hotspot M-Pesa billing work?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+We deploy enterprise-grade access points integrated with automated M-Pesa PayBill software (PayBill 400200). Users who connect to your Wi-Fi network are greeted with a branded captive portal where they select a time or data bundle, pay directly via M-Pesa, and receive instant internet access without manual intervention.
+</div>
+</details>
+<!-- FAQ 5 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-shield-halved text-accent" style="margin-right:10px;"></i> Do your hardware components and installations come with warranties?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+Yes. All equipment supplied by Synerbrix (including CCTV cameras, network switches, routers, and computer parts) comes with manufacturer warranties ranging from <strong>1 to 3 years</strong>. Additionally, we provide a full workmanship guarantee on structured cabling, installation, and labor.
+</div>
+</details>
+<!-- FAQ 6 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-handshake-angle text-accent" style="margin-right:10px;"></i> Can we retain Synerbrix for ongoing monthly IT maintenance?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+Yes. We offer flexible Managed IT Retainer plans tailored to small and medium enterprises. This includes ongoing helpdesk support, proactive virus/security monitoring, automated cloud backups, network optimization, and regular hardware health checks for a predictable monthly fee.
+</div>
+</details>
+<!-- FAQ 7 -->
+<details class="faq-accordion-item reveal">
+<summary class="faq-summary">
+<span><i class="fa-solid fa-credit-card text-accent" style="margin-right:10px;"></i> What payment options do you accept for invoices?</span>
+<i class="fa-solid fa-chevron-down faq-icon"></i>
+</summary>
+<div class="faq-content">
+We accept corporate M-Pesa PayBill payments using Business PayBill <strong>400200</strong> (Account Number: <strong>0714202996</strong>) as well as direct Electronic Funds Transfer (EFT) / Bank Transfer. All payments are officially receipted and accompanied by tax-compliant invoices.
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ===== HIGH-CONVERSION CONTACT & QUOTE FORM ===== -->
+<section class="contact-section section-padding bg-dark text-white" id="contact">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-info">
+<span class="section-subtitle text-accent">GET STARTED TODAY</span>
+<h2>Ready to Upgrade Your Technology Infrastructure?</h2>
+<p>Reach out now for a free, zero-obligation proposal. Our technical experts are ready to review your project requirements.</p>
+<div class="info-items">
+<div class="info-item">
+<i class="fa-solid fa-phone"></i>
+<div>
+<h5>Call / Direct Support Line</h5>
+<p><a href="tel:0732832849" class="text-white">0732 832 849</a></p>
+</div>
+</div>
+<div class="info-item">
+<i class="fa-brands fa-whatsapp"></i>
+<div>
+<h5>Instant WhatsApp Chat</h5>
+<p><a href="[https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20need%20a%20quote](https://wa.me/254732832849?text=Hello%20Synerbrix,%20I%20need%20a%20quote)." target="_blank" class="text-accent">Click to Chat Directly</a></p>
+</div>
+</div>
+<div class="info-item">
+<i class="fa-solid fa-envelope"></i>
+<div>
+<h5>Official Email Inquiries</h5>
+<p><a href="mailto:info@synerbrix.co.ke" class="text-white">info@synerbrix.co.ke</a></p>
+</div>
+</div>
+<div class="info-item">
+<i class="fa-solid fa-receipt"></i>
+<div>
+<h5>Verified Business Payment</h5>
+<p>M-Pesa PayBill: <strong>400200</strong> | Account: <strong>0714202996</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-form-card">
+<h3>Request Your Free Technical Quote</h3>
+<p style="color:#64748b; font-size:0.9rem; margin-bottom:20px;">Fill in your details and our lead technician will contact you within 2 business hours.</p>
+<form id="quote-form" novalidate>
+<div class="form-group">
+<label for="fullName">Full Name / Business Name</label>
+<input type="text" id="fullName" class="form-input" placeholder="e.g. Isack Kibet / Business Ltd" required />
+<span class="error-msg" id="nameError">Please enter your name or company.</span>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number / WhatsApp</label>
+<input type="tel" id="phone" class="form-input" placeholder="07XX XXX XXX" required />
+<span class="error-msg" id="phoneError">Please enter a valid phone number.</span>
+</div>
+<div class="form-group">
+<label for="service">Service Required</label>
+<select id="service" class="form-input" required>
+<option value="">Select a service category...</option>
+<option value="web">Web & Custom Software Engineering</option>
+<option value="it">Managed IT Support & Maintenance</option>
+<option value="networking">Structured Networking & Enterprise Wi-Fi</option>
+<option value="cybersecurity">Cybersecurity Audit & Threat Defense</option>
+<option value="cctv">4K HD CCTV Surveillance System</option>
+<option value="hotspot">Community / Estate Wi-Fi Hotspot Billing</option>
+<option value="hardware">Hardware Diagnostics & Fleet Repair</option>
+</select>
+<span class="error-msg" id="serviceError">Please select a service.</span>
+</div>
+<div class="form-group">
+<label for="message">Project Overview / Key Requirements</label>
+<textarea id="message" class="form-input" rows="4" placeholder="Briefly describe your objectives, timeline, or current technical issues..." required></textarea>
+<span class="error-msg" id="messageError">Please enter brief project details.</span>
+</div>
+<button type="submit" class="btn btn-primary btn-block">
+Submit Quote Request <i class="fa-solid fa-paper-plane"></i>
+</button>
+<p class="cta-microcopy"><i class="fa-solid fa-lock"></i> Privacy Guaranteed. No spam or unrequested calls.</p>
+</form>
+<div id="formSuccess" class="form-success">
+<i class="fa-solid fa-circle-check"></i>
+<p>Thank you! Your inquiry has been received. A Synerbrix specialist will reach out shortly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<div class="container footer-content">
+<div class="footer-col brand-col">
+<a href="#home" class="logo logo-light">
+<span class="logo-text">SYNERBRIX</span><span class="logo-dot">.</span>
+</a>
+<p>Digital & Technical Infrastructure Solutions.<br />Web • IT • Networking • Security • CCTV • Connectivity</p>
+</div>
+<div class="footer-col">
+<h5>Core Solutions</h5>
+<ul>
+<li><a href="#services">Web & Software Design</a></li>
+<li><a href="#services">Managed IT Support</a></li>
+<li><a href="#services">Structured Cabling</a></li>
+<li><a href="#services">Cybersecurity Audits</a></li>
+<li><a href="#services">4K CCTV Systems</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Quick Navigation</h5>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#why-us">Why Us</a></li>
+<li><a href="#who-we-serve">Who We Serve</a></li>
+<li><a href="#testimonials">Client Reviews</a></li>
+<li><a href="#how-it-works">Process</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Corporate Payment</h5>
+<div class="mpesa-highlight">
+<p style="margin:0;">M‑Pesa PayBill: <strong>400200</strong><br />Account: <strong>0714202996</strong></p>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container text-center">
+<p>© 2026 Synerbrix Limited. All Rights Reserved. Reliable • Secure • Scalable</p>
+</div>
+</div>
+</footer>
+<!-- ===== EXTERNAL JAVASCRIPT (CDN) ===== -->
+<script src="[https://code.jquery.com/jquery-3.7.1.min.js](https://code.jquery.com/jquery-3.7.1.min.js)" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+<script src="[https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js](https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js)" defer></script>
+<script src="[https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js](https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js)" defer></script>
+<!-- ===== LOCAL JAVASCRIPT ===== -->
+<script src="script.js" defer></script>
 </body>
 </html>
