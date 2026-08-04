@@ -53,6 +53,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <!-- ===== LOCAL STYLES ===== -->
 <link rel="stylesheet" href="style.css?v=3" />
+
+<!-- ===== FALLBACK STYLE (ensures reveal elements are visible even if external CSS/JS fails) ===== -->
+<style>
+    /* Force all .reveal elements to be visible by default – override any external animation */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+    /* Ensure page loader is hidden as soon as CSS loads */
+    #pageLoader {
+        display: none !important;
+    }
+    /* Ensure FAQ accordion items are visible (they are details elements) */
+    .faq-accordion-item {
+        display: block !important;
+        visibility: visible !important;
+    }
+</style>
+
+<!-- ===== PREVIOUS INLINE STYLES (unchanged) ===== -->
 <style>
 .hero-main-img {
 width: 100%;
@@ -990,5 +1011,36 @@ Submit Quote Request <i class="fa-solid fa-paper-plane"></i>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <!-- ===== LOCAL JAVASCRIPT ===== -->
 <script src="script.js" defer></script>
+
+<!-- ===== FALLBACK SCRIPT (ensures content appears even if external JS fails) ===== -->
+<script>
+    (function() {
+        // 1. Hide the page loader immediately
+        var loader = document.getElementById('pageLoader');
+        if (loader) loader.style.display = 'none';
+
+        // 2. Force all .reveal elements to be fully visible
+        var reveals = document.querySelectorAll('.reveal');
+        if (reveals.length > 0) {
+            reveals.forEach(function(el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+                el.style.visibility = 'visible';
+            });
+        }
+
+        // 3. Ensure FAQ accordion items are displayed
+        var faqItems = document.querySelectorAll('.faq-accordion-item');
+        if (faqItems.length > 0) {
+            faqItems.forEach(function(el) {
+                el.style.display = 'block';
+                el.style.visibility = 'visible';
+            });
+        }
+
+        // 4. (Optional) If external JS eventually loads, this script won't break it
+        console.log('✅ Fallback script applied – content is guaranteed visible.');
+    })();
+</script>
 </body>
 </html>
