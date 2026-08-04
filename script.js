@@ -1,6 +1,7 @@
 /**
  * Features: High-performance IntersectionObservers, GSAP integration with fallbacks,
- * mobile drawer locks, full Kenyan mobile regex, and accessible form handling.
+ * mobile drawer locks, full Kenyan mobile regex, FAQ outside-click auto-collapse, 
+ * and accessible form handling.
  */
 (function() {
     'use strict';
@@ -175,7 +176,22 @@
         sections.forEach(section => observer.observe(section));
     };
 
-    // ----- 5. FORM VALIDATION & INTERACTION -----
+    // ----- 5. FAQ COLLAPSE ON OUTSIDE CLICK -----
+    const initFaqAccordion = () => {
+        document.addEventListener('click', (e) => {
+            // Check if user clicked on or inside a summary question
+            const clickedSummary = e.target.closest('summary.faq-summary');
+
+            // Collapse all open FAQs except the one currently clicked (if any)
+            document.querySelectorAll('details.faq-accordion-item[open]').forEach(faq => {
+                if (!clickedSummary || faq !== clickedSummary.parentElement) {
+                    faq.removeAttribute('open');
+                }
+            });
+        });
+    };
+
+    // ----- 6. FORM VALIDATION & INTERACTION -----
     const initFormValidation = () => {
         const form = document.getElementById('quote-form');
         const successEl = document.getElementById('formSuccess');
@@ -278,7 +294,7 @@
         });
     };
 
-    // ----- 6. HEADER-OFFSET SMOOTH SCROLL -----
+    // ----- 7. HEADER-OFFSET SMOOTH SCROLL -----
     const initSmoothScroll = () => {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -308,6 +324,7 @@
         initScrollAnimations();
         initMobileNav();
         initScrollSpy();
+        initFaqAccordion();
         initFormValidation();
         initSmoothScroll();
     });
