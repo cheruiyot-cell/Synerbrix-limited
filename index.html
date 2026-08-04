@@ -14,7 +14,7 @@
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Synerbrix Limited – Digital Solutions for Modern Business" />
     <meta property="og:description" content="Web development, IT support, networking, cybersecurity, Wi‑Fi, and CCTV – all under one roof. Practical technology that works for your business." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80" />
     <meta property="og:url" content="https://synerbrix.co.ke/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Synerbrix Limited" />
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Synerbrix Limited – Digital Solutions for Modern Business" />
     <meta name="twitter:description" content="Web, IT, networking, cybersecurity, CCTV &amp; Wi‑Fi – one partner, multiple solutions." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=630&q=80" />
 
     <!-- ===== STRUCTURED DATA (JSON‑LD) ===== -->
     <script type="application/ld+json">
@@ -59,7 +59,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <!-- ===== LOCAL STYLES (Cache-busting version) ===== -->
-    <link rel="stylesheet" href="style.css?v=1" />
+    <link rel="stylesheet" href="style.css?v=2" />
+    
+    <style>
+        /* Inline style to ensure the hero image resizes properly if style.css is delayed */
+        .hero-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0 0 12px 12px;
+            display: block;
+        }
+        .graphic-card .card-body {
+            padding: 0 !important;
+            overflow: hidden;
+        }
+        .graphic-card .card-header {
+            padding: 12px 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -97,9 +115,11 @@
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#why-us" class="nav-link">Why Us</a></li>
                     <li><a href="#who-we-serve" class="nav-link">Who We Serve</a></li>
                     <li><a href="#how-it-works" class="nav-link">How We Work</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -142,14 +162,11 @@
                             <span class="card-title">Synerbrix Tech Hub</span>
                         </div>
                         <div class="card-body">
-                            <div class="grid-preview">
-                                <div class="preview-box"><i class="fa-solid fa-code"></i><span>Websites</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-headset"></i><span>IT Support</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-network-wired"></i><span>Networks</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-lock"></i><span>Cybersecurity</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-wifi"></i><span>Wi‑Fi Hotspots</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-video"></i><span>CCTV</span></div>
-                            </div>
+                            <!-- Replaced grid-preview with a high-quality Unsplash image -->
+                            <img class="hero-main-img" 
+                                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Modern office workspace with a professional team" 
+                                 loading="lazy" />
                         </div>
                     </div>
                     <div class="floating-badge badge-1">
@@ -194,7 +211,7 @@
                     <!-- Service 1 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web development and software solutions" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Web development and software solutions" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3>Web &amp; Software</h3>
@@ -209,7 +226,7 @@
                     <!-- Service 2 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&q=80" alt="IT support and computer maintenance" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80" alt="IT support and computer maintenance" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
                         <h3>IT Support</h3>
@@ -224,7 +241,7 @@
                     <!-- Service 3 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1558494949-ef526d0048ac?w=600&q=80" alt="Networking and structured cabling" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1558494949-ef526d0048ac?auto=format&fit=crop&w=600&q=80" alt="Networking and structured cabling" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
                         <h3>Networking</h3>
@@ -239,7 +256,7 @@
                     <!-- Service 4 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Cybersecurity protection and audits" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity protection and audits" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
                         <h3>Cybersecurity</h3>
@@ -254,7 +271,7 @@
                     <!-- Service 5 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?w=600&q=80" alt="Wi-Fi hotspot and community internet solutions" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?auto=format&fit=crop&w=600&q=80" alt="Wi-Fi hotspot and community internet solutions" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
                         <h3>Wi‑Fi Solutions</h3>
@@ -269,7 +286,7 @@
                     <!-- Service 6 -->
                     <article class="service-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="Hardware diagnostics and computer repair" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" alt="Hardware diagnostics and computer repair" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-screwdrivers-fixed"></i></div>
                         <h3>Hardware Care</h3>
@@ -284,7 +301,7 @@
                     <!-- Service 7 (CCTV) -->
                     <article class="service-card highlight-card reveal">
                         <div class="service-img-wrap">
-                            <img class="service-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="CCTV and surveillance camera installation" loading="lazy" />
+                            <img class="service-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="CCTV and surveillance camera installation" loading="lazy" />
                         </div>
                         <div class="service-icon"><i class="fa-solid fa-video"></i></div>
                         <h3>CCTV &amp; Surveillance</h3>
@@ -299,8 +316,44 @@
             </div>
         </section>
 
+        <!-- ===== WHY SYNERBRIX (NEW SECTION) ===== -->
+        <section class="why-us section-padding" id="why-us">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">WHY SYNERBRIX?</span>
+                    <h2>Three reasons businesses trust us.</h2>
+                    <p>We keep things simple. No confusing jargon. Just clear solutions.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card reveal">
+                        <div class="why-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h4>We Speak Plain English</h4>
+                        <p>No geek speak. We explain every step in words you understand. If you have a question, we answer it clearly — no frills, no tech talk.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h4>We Are Local &amp; Responsive</h4>
+                        <p>Based in Nairobi. We pick up your call, reply to your WhatsApp, and show up when you need us. Real support from real people nearby.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h4>We Focus on What You Actually Need</h4>
+                        <p>We don't sell you expensive gadgets you don't need. We listen to your budget and challenges, then recommend practical tools that work for your business.</p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                         alt="Team working together in an office" 
+                         class="reveal" 
+                         style="width:100%; max-width:700px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);" 
+                         loading="lazy" />
+                </div>
+            </div>
+        </section>
+
         <!-- ===== WHO WE SERVE ===== -->
-        <section class="who-we-serve section-padding" id="who-we-serve">
+        <section class="who-we-serve section-padding bg-light" id="who-we-serve">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">TAILORED SOLUTIONS</span>
@@ -334,7 +387,7 @@
         </section>
 
         <!-- ===== HOW WE WORK ===== -->
-        <section class="how-it-works section-padding bg-light" id="how-it-works">
+        <section class="how-it-works section-padding" id="how-it-works">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">OUR PROCESS</span>
@@ -368,13 +421,15 @@
         </section>
 
         <!-- ===== ABOUT / CLOSING SECTION ===== -->
-        <section class="about-summary section-padding" id="about">
+        <section class="about-summary section-padding bg-light" id="about">
             <div class="container about-container">
                 <div class="about-text">
-                    <span class="section-subtitle">WHY CHOOSE SYNERBRIX?</span>
+                    <span class="section-subtitle">WHO WE ARE</span>
                     <h2>You don't need complex technology. You need technology that works—reliably, securely, and affordably.</h2>
                     <p class="lead-text">That's what Synerbrix delivers every day. Our team is local, responsive, and ready to solve your specific challenges, whether you're a small business, a school, or a growing organization.</p>
-                    <p>Let us handle the technical side so you can focus on your mission. Get in touch today for a free, no-obligation quote. We're just a call or WhatsApp message away.</p>
+                    <p>We started Synerbrix because we saw too many businesses struggling with broken computers, slow internet, and confusing websites. We believed there had to be a better way — one company that handles it all with honesty and care.</p>
+                    <p>Today, we do exactly that. We fix what's broken, upgrade what's outdated, and protect what matters most. And we do it all without overcharging or overcomplicating things.</p>
+                    <p><strong>Let us handle the technical side so you can focus on your mission.</strong> Get in touch today for a free, no-obligation quote. We're just a call or WhatsApp message away.</p>
 
                     <div class="payment-trust-box">
                         <h5><i class="fa-solid fa-wallet"></i> Verified Payment Details</h5>
@@ -387,7 +442,7 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat-card reveal">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Synerbrix team working together" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:1rem;" />
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Synerbrix team working together" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:1rem;" />
                         <i class="fa-solid fa-sliders"></i>
                         <h3>100%</h3>
                         <p>Practical &amp; Scalable</p>
@@ -401,6 +456,38 @@
                         <i class="fa-solid fa-handshake"></i>
                         <h3>Single</h3>
                         <p>Technology Partner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FREQUENTLY ASKED QUESTIONS (NEW SECTION) ===== -->
+        <section class="faq-section section-padding" id="faq">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">COMMON QUESTIONS</span>
+                    <h2>We know technology can be confusing. Here are simple answers.</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item reveal">
+                        <h4><i class="fa-solid fa-circle-question"></i> How much does a website cost?</h4>
+                        <p>It depends on what you need. A simple business website costs less than a custom online store. We give you a detailed, fixed quote upfront — so there are no surprise charges later.</p>
+                    </div>
+                    <div class="faq-item reveal">
+                        <h4><i class="fa-solid fa-circle-question"></i> Do you offer remote support?</h4>
+                        <p>Yes. We can fix many computer and network issues remotely. It saves you time and gets you back to work faster. If the problem needs an on-site visit, we come to you.</p>
+                    </div>
+                    <div class="faq-item reveal">
+                        <h4><i class="fa-solid fa-circle-question"></i> What if I don't understand technology?</h4>
+                        <p>That's why we're here. We guide you step by step in plain English. Think of us as your friendly tech neighbours. We explain everything until it makes sense to you.</p>
+                    </div>
+                    <div class="faq-item reveal">
+                        <h4><i class="fa-solid fa-circle-question"></i> Do you do CCTV installation for homes?</h4>
+                        <p>Absolutely. We install cameras for homes, offices, and commercial spaces. We also set up remote viewing so you can check your cameras from your phone.</p>
+                    </div>
+                    <div class="faq-item reveal">
+                        <h4><i class="fa-solid fa-circle-question"></i> How do I pay you?</h4>
+                        <p>We accept M-Pesa. Our PayBill is <strong>400200</strong> and the Account number is <strong>0714202996</strong>. We'll send you a proper invoice, and you pay quickly and securely.</p>
                     </div>
                 </div>
             </div>
@@ -512,10 +599,11 @@
                 <h5>Quick Links</h5>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#who-we-serve">Who We Serve</a></li>
                     <li><a href="#how-it-works">How We Work</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
