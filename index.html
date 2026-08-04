@@ -1,18 +1,77 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Synerbrix Limited - Digital Solutions for Modern Business. Professional websites, IT support, networking, cybersecurity, Wi-Fi, and CCTV solutions.">
-    <title>Synerbrix Limited | Digital Solutions for Modern Business</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome for clean icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== PRIMARY SEO META TAGS ===== -->
+    <title>Synerbrix Limited | Digital Solutions for Modern Business – Web, IT, Networking, CCTV &amp; Cybersecurity</title>
+    <meta name="description" content="Synerbrix Limited delivers professional websites, IT support, networking, cybersecurity, Wi‑Fi hotspots, and CCTV solutions in Kenya. One partner, multiple solutions – practical, secure, scalable." />
+    <meta name="keywords" content="Synerbrix, digital solutions Kenya, web development Kenya, IT support Nairobi, networking services, cybersecurity Kenya, CCTV installation, Wi-Fi hotspots, M-Pesa PayBill 400200, technology partner" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://synerbrix.co.ke/" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content="Synerbrix Limited – Digital Solutions for Modern Business" />
+    <meta property="og:description" content="Web development, IT support, networking, cybersecurity, Wi‑Fi, and CCTV – all under one roof. Practical technology that works for your business." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop" />
+    <meta property="og:url" content="https://synerbrix.co.ke/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Synerbrix Limited" />
+    <meta property="og:locale" content="en_KE" />
+
+    <!-- ===== TWITTER CARDS ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Synerbrix Limited – Digital Solutions for Modern Business" />
+    <meta name="twitter:description" content="Web, IT, networking, cybersecurity, CCTV &amp; Wi‑Fi – one partner, multiple solutions." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop" />
+
+    <!-- ===== STRUCTURED DATA (JSON‑LD) ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Synerbrix Limited",
+            "description": "Digital solutions for modern business: websites, IT support, networking, cybersecurity, Wi-Fi hotspots, and CCTV installation.",
+            "url": "https://synerbrix.co.ke/",
+            "telephone": "+254732832849",
+            "email": "info@synerbrix.co.ke",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nairobi",
+                "addressCountry": "KE"
+            },
+            "paymentAccepted": ["M-Pesa"],
+            "priceRange": "$$",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "sameAs": [
+                "https://wa.me/254732832849"
+            ]
+        }
+    </script>
+
+    <!-- ===== EXTERNAL CSS (CDN) ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- ===== LOCAL STYLES ===== -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Top Announcement / Bar -->
+    <!-- ===== PREMIUM PAGE LOADER ===== -->
+    <div class="page-loader" id="pageLoader">
+        <div style="text-align:center;">
+            <div class="spinner"></div>
+            <div class="loader-text">SYNERBRIX</div>
+        </div>
+    </div>
+
+    <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-contact">
@@ -26,7 +85,7 @@
         </div>
     </div>
 
-    <!-- Sticky Navigation Bar -->
+    <!-- ===== STICKY NAVIGATION ===== -->
     <header class="header" id="header">
         <div class="container nav-container">
             <a href="#home" class="logo">
@@ -55,14 +114,15 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- ===== HERO SECTION ===== -->
         <section class="hero" id="home">
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="pill-tag"><i class="fa-solid fa-bolt"></i> One Partner. Multiple Solutions.</span>
                     <h1 class="hero-title">Technology that works for your business.</h1>
                     <p class="hero-subtitle">
-                        From websites and software to IT support, networking, cybersecurity, and connectivity — Synerbrix gives you practical technology solutions under one roof.
+                        From websites and software to IT support, networking, cybersecurity, and connectivity —
+                        Synerbrix gives you practical technology solutions under one roof.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary btn-large">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
@@ -71,7 +131,7 @@
                         </a>
                     </div>
                     <div class="hero-trust">
-                        <div class="trust-item"><i class="fa-solid fa-check-circle"></i> Practical & Simple</div>
+                        <div class="trust-item"><i class="fa-solid fa-check-circle"></i> Practical &amp; Simple</div>
                         <div class="trust-item"><i class="fa-solid fa-check-circle"></i> Zero Downtime Mindset</div>
                         <div class="trust-item"><i class="fa-solid fa-check-circle"></i> Localized Support</div>
                     </div>
@@ -88,7 +148,7 @@
                                 <div class="preview-box"><i class="fa-solid fa-headset"></i><span>IT Support</span></div>
                                 <div class="preview-box"><i class="fa-solid fa-network-wired"></i><span>Networks</span></div>
                                 <div class="preview-box"><i class="fa-solid fa-lock"></i><span>Cybersecurity</span></div>
-                                <div class="preview-box"><i class="fa-solid fa-wifi"></i><span>Wi-Fi Hotspots</span></div>
+                                <div class="preview-box"><i class="fa-solid fa-wifi"></i><span>Wi‑Fi Hotspots</span></div>
                                 <div class="preview-box"><i class="fa-solid fa-video"></i><span>CCTV</span></div>
                             </div>
                         </div>
@@ -104,7 +164,7 @@
             </div>
         </section>
 
-        <!-- Problem / Solution Banner -->
+        <!-- ===== PROBLEM / SOLUTION BANNER ===== -->
         <section class="problem-solution section-padding">
             <div class="container">
                 <div class="ps-grid">
@@ -122,7 +182,7 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- ===== SERVICES SECTION ===== -->
         <section class="services section-padding bg-light" id="services">
             <div class="container">
                 <div class="section-header text-center">
@@ -133,9 +193,12 @@
 
                 <div class="services-grid">
                     <!-- Service 1 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Web development and software solutions" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h3>Web & Software</h3>
+                        <h3>Web &amp; Software</h3>
                         <p>Professional websites, web applications, and tailored software solutions designed to make your business discoverable, credible, and effective.</p>
                         <ul class="service-bullets">
                             <li><i class="fa-solid fa-angle-right"></i> Responsive Website Design</li>
@@ -145,31 +208,40 @@
                     </article>
 
                     <!-- Service 2 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&q=80" alt="IT support and computer maintenance" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
                         <h3>IT Support</h3>
                         <p>Fast, practical assistance for computers, software, setup, maintenance, and day-to-day technical issues to eliminate downtime.</p>
                         <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> Troubleshooting & Setup</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Troubleshooting &amp; Setup</li>
                             <li><i class="fa-solid fa-angle-right"></i> Preventive Maintenance</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Remote & On-Site Help</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Remote &amp; On-Site Help</li>
                         </ul>
                     </article>
 
                     <!-- Service 3 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1558494949-ef526d0048ac?w=600&q=80" alt="Networking and structured cabling" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
                         <h3>Networking</h3>
-                        <p>Reliable local networks (LAN), Wi-Fi setup, configuration, connectivity, and network management configured for optimal performance.</p>
+                        <p>Reliable local networks (LAN), Wi‑Fi setup, configuration, connectivity, and network management configured for optimal performance.</p>
                         <ul class="service-bullets">
                             <li><i class="fa-solid fa-angle-right"></i> LAN / Structured Cabling</li>
-                            <li><i class="fa-solid fa-angle-right"></i> Wi-Fi Access Points</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Wi‑Fi Access Points</li>
                             <li><i class="fa-solid fa-angle-right"></i> Network Optimization</li>
                         </ul>
                     </article>
 
                     <!-- Service 4 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Cybersecurity protection and audits" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
                         <h3>Cybersecurity</h3>
                         <p>Practical security guidance, protection measures, and security awareness practices that help reduce avoidable digital risks.</p>
@@ -181,19 +253,25 @@
                     </article>
 
                     <!-- Service 5 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1518544806353-0f67a2c4fa29?w=600&q=80" alt="Wi-Fi hotspot and community internet solutions" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
-                        <h3>Wi-Fi Solutions</h3>
+                        <h3>Wi‑Fi Solutions</h3>
                         <p>Hotspot planning, deployment, access control, affordable package billing concepts, and connectivity support for communities.</p>
                         <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> Community & Estate Wi-Fi</li>
+                            <li><i class="fa-solid fa-angle-right"></i> Community &amp; Estate Wi‑Fi</li>
                             <li><i class="fa-solid fa-angle-right"></i> Hotspot Billing Setup</li>
                             <li><i class="fa-solid fa-angle-right"></i> Bandwidth Control</li>
                         </ul>
                     </article>
 
                     <!-- Service 6 -->
-                    <article class="service-card">
+                    <article class="service-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="Hardware diagnostics and computer repair" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-screwdrivers-fixed"></i></div>
                         <h3>Hardware Care</h3>
                         <p>Diagnostics, maintenance, upgrades, and technical care for your office devices to extend their useful operational lifespan.</p>
@@ -204,22 +282,25 @@
                         </ul>
                     </article>
 
-                    <!-- Service 7 (CCTV Highlight) -->
-                    <article class="service-card highlight-card">
+                    <!-- Service 7 (CCTV) -->
+                    <article class="service-card highlight-card reveal">
+                        <div class="service-img-wrap">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="CCTV and surveillance camera installation" loading="lazy" />
+                        </div>
                         <div class="service-icon"><i class="fa-solid fa-video"></i></div>
-                        <h3>CCTV & Surveillance</h3>
+                        <h3>CCTV &amp; Surveillance</h3>
                         <p>See More. Know More. Stay Protected. Professional indoor/outdoor CCTV installation, DVR/NVR setups, and secure remote viewing.</p>
                         <ul class="service-bullets">
-                            <li><i class="fa-solid fa-angle-right"></i> IP & Network Cameras</li>
+                            <li><i class="fa-solid fa-angle-right"></i> IP &amp; Network Cameras</li>
                             <li><i class="fa-solid fa-angle-right"></i> Remote Mobile Access</li>
-                            <li><i class="fa-solid fa-angle-right"></i> System Maintenance & Upgrades</li>
+                            <li><i class="fa-solid fa-angle-right"></i> System Maintenance &amp; Upgrades</li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Who We Serve Section -->
+        <!-- ===== WHO WE SERVE ===== -->
         <section class="who-we-serve section-padding" id="who-we-serve">
             <div class="container">
                 <div class="section-header text-center">
@@ -229,22 +310,22 @@
                 </div>
 
                 <div class="audience-grid">
-                    <div class="audience-card">
+                    <div class="audience-card reveal">
                         <div class="audience-icon"><i class="fa-solid fa-building-user"></i></div>
                         <h4>SMEs</h4>
                         <p>Build your online presence, strengthen IT systems, and streamline business operations.</p>
                     </div>
-                    <div class="audience-card">
+                    <div class="audience-card reveal">
                         <div class="audience-icon"><i class="fa-solid fa-school"></i></div>
                         <h4>Schools</h4>
                         <p>Reliable connectivity, computer room support, and practical network deployments for education.</p>
                     </div>
-                    <div class="audience-card">
+                    <div class="audience-card reveal">
                         <div class="audience-icon"><i class="fa-solid fa-sitemap"></i></div>
                         <h4>Organizations</h4>
                         <p>Robust technology infrastructure, dedicated support, and security-focused managed services.</p>
                     </div>
-                    <div class="audience-card">
+                    <div class="audience-card reveal">
                         <div class="audience-icon"><i class="fa-solid fa-user-check"></i></div>
                         <h4>Individuals</h4>
                         <p>Device diagnostics, software setup, network troubleshooting, and personal digital support.</p>
@@ -253,7 +334,7 @@
             </div>
         </section>
 
-        <!-- How We Work Section -->
+        <!-- ===== HOW WE WORK ===== -->
         <section class="how-it-works section-padding bg-light" id="how-it-works">
             <div class="container">
                 <div class="section-header text-center">
@@ -263,22 +344,22 @@
                 </div>
 
                 <div class="process-steps">
-                    <div class="step-card">
+                    <div class="step-card reveal">
                         <div class="step-number">01</div>
                         <h4>LISTEN</h4>
                         <p>We understand your challenge, goals, budget, and specific operating environment.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card reveal">
                         <div class="step-number">02</div>
                         <h4>PLAN</h4>
                         <p>We recommend the right practical solution and clearly define the project scope.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card reveal">
                         <div class="step-number">03</div>
                         <h4>BUILD</h4>
                         <p>We implement the technology with sharp attention to quality and standard security practices.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="step-card reveal">
                         <div class="step-number">04</div>
                         <h4>SUPPORT</h4>
                         <p>We stay available for ongoing improvements, maintenance, troubleshooting, and support.</p>
@@ -287,7 +368,7 @@
             </div>
         </section>
 
-        <!-- About Us Summary -->
+        <!-- ===== ABOUT SUMMARY ===== -->
         <section class="about-summary section-padding" id="about">
             <div class="container about-container">
                 <div class="about-text">
@@ -295,10 +376,10 @@
                     <h2>A modern technology partner for growing enterprises.</h2>
                     <p class="lead-text">Technology downtime costs money. We help you prevent problems before they become costly disruptions.</p>
                     <p>At Synerbrix, we believe technology should empower your business, not frustrate it. We combine deep domain expertise in web software, networking, CCTV, and cybersecurity to deliver solutions that are simple, reliable, and scalable.</p>
-                    
+
                     <div class="payment-trust-box">
                         <h5><i class="fa-solid fa-wallet"></i> Verified Payment Details</h5>
-                        <p>For quick & seamless invoicing / payments via M-Pesa:</p>
+                        <p>For quick &amp; seamless invoicing / payments via M‑Pesa:</p>
                         <div class="mpesa-details">
                             <div><strong>PayBill:</strong> 400200</div>
                             <div><strong>Account:</strong> 0714202996</div>
@@ -306,17 +387,18 @@
                     </div>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
+                    <div class="stat-card reveal">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Synerbrix team working together" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:1rem;" />
                         <i class="fa-solid fa-sliders"></i>
                         <h3>100%</h3>
-                        <p>Practical & Scalable</p>
+                        <p>Practical &amp; Scalable</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card reveal">
                         <i class="fa-solid fa-clock"></i>
                         <h3>24/7</h3>
                         <p>System Reliability</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card reveal">
                         <i class="fa-solid fa-handshake"></i>
                         <h3>Single</h3>
                         <p>Technology Partner</p>
@@ -325,7 +407,7 @@
             </div>
         </section>
 
-        <!-- Contact & Quote Form Section -->
+        <!-- ===== CONTACT & QUOTE FORM ===== -->
         <section class="contact-section section-padding bg-dark text-white" id="contact">
             <div class="container">
                 <div class="contact-grid">
@@ -352,7 +434,7 @@
                             <div class="info-item">
                                 <i class="fa-solid fa-receipt"></i>
                                 <div>
-                                    <h5>M-Pesa Business Payment</h5>
+                                    <h5>M‑Pesa Business Payment</h5>
                                     <p>PayBill: <strong>400200</strong> | Account: <strong>0714202996</strong></p>
                                 </div>
                             </div>
@@ -364,13 +446,13 @@
                         <form id="quote-form" novalidate>
                             <div class="form-group">
                                 <label for="fullName">Full Name</label>
-                                <input type="text" id="fullName" class="form-input" placeholder="e.g. Isack Kibet" required>
+                                <input type="text" id="fullName" class="form-input" placeholder="e.g. Isack Kibet" required />
                                 <span class="error-msg" id="nameError">Please enter your name.</span>
                             </div>
 
                             <div class="form-group">
                                 <label for="phone">Phone Number / WhatsApp</label>
-                                <input type="tel" id="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                <input type="tel" id="phone" class="form-input" placeholder="07XX XXX XXX" required />
                                 <span class="error-msg" id="phoneError">Please enter a valid phone number.</span>
                             </div>
 
@@ -378,12 +460,12 @@
                                 <label for="service">Required Service</label>
                                 <select id="service" class="form-input" required>
                                     <option value="">Select a service...</option>
-                                    <option value="web">Web & Software Development</option>
-                                    <option value="it">IT Support & Diagnostics</option>
-                                    <option value="networking">Networking & Wi-Fi Solutions</option>
+                                    <option value="web">Web &amp; Software Development</option>
+                                    <option value="it">IT Support &amp; Diagnostics</option>
+                                    <option value="networking">Networking &amp; Wi‑Fi Solutions</option>
                                     <option value="cybersecurity">Cybersecurity Guidance</option>
-                                    <option value="cctv">CCTV & Surveillance Installation</option>
-                                    <option value="hardware">Hardware Repair & Upgrades</option>
+                                    <option value="cctv">CCTV &amp; Surveillance Installation</option>
+                                    <option value="hardware">Hardware Repair &amp; Upgrades</option>
                                 </select>
                                 <span class="error-msg" id="serviceError">Please select a service.</span>
                             </div>
@@ -408,19 +490,19 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col brand-col">
                 <a href="#home" class="logo logo-light">
                     <span class="logo-text">SYNERBRIX</span><span class="logo-dot">.</span>
                 </a>
-                <p>Digital Solutions for Modern Business.<br>Web • IT • Networks • Cybersecurity • CCTV • Connectivity</p>
+                <p>Digital Solutions for Modern Business.<br />Web • IT • Networks • Cybersecurity • CCTV • Connectivity</p>
             </div>
             <div class="footer-col">
                 <h5>Services</h5>
                 <ul>
-                    <li><a href="#services">Web & Software</a></li>
+                    <li><a href="#services">Web &amp; Software</a></li>
                     <li><a href="#services">IT Support</a></li>
                     <li><a href="#services">Networking</a></li>
                     <li><a href="#services">Cybersecurity</a></li>
@@ -439,7 +521,9 @@
             </div>
             <div class="footer-col">
                 <h5>Payment Info</h5>
-                <p>M-Pesa PayBill: <strong>400200</strong><br>Account: <strong>0714202996</strong></p>
+                <div class="mpesa-highlight">
+                    <p style="margin:0;">M‑Pesa PayBill: <strong>400200</strong><br />Account: <strong>0714202996</strong></p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -449,6 +533,19 @@
         </div>
     </footer>
 
+    <!-- ===== EXTERNAL JAVASCRIPT (CDN) ===== -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+    </script>
+
+    <!-- ===== LOCAL JAVASCRIPT ===== -->
     <script src="script.js"></script>
+
 </body>
 </html>
