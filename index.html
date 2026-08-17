@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ===== PRIMARY SEO META TAGS ===== -->
   <title>Synerbrix Limited | High-Performance Web Development, IT Support & Security Infrastructure</title>
   <meta name="description" content="Empower your business with high-converting websites, 24/7 proactive IT support, enterprise networking, HD CCTV surveillance, and cybersecurity in Kenya. Zero downtime, single-vendor simplicity." />
   <meta name="keywords" content="Synerbrix, digital solutions Kenya, web development Kenya, IT support Nairobi, networking services, cybersecurity Kenya, CCTV installation Nairobi, Wi-Fi hotspots, M-Pesa PayBill 400200, managed IT services" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://synerbrix.co.ke/" />
   
-  <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:title" content="Synerbrix Limited – Reliable IT & Digital Infrastructure for Growing Businesses" />
   <meta property="og:description" content="Eliminate tech headaches with one trusted partner for Web, Networking, Cybersecurity, IT Support, and CCTV Systems. Fast response, transparent pricing." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&h=630&q=80" />
@@ -19,13 +17,11 @@
   <meta property="og:site_name" content="Synerbrix Limited" />
   <meta property="og:locale" content="en_KE" />
   
-  <!-- ===== TWITTER CARDS ===== -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Synerbrix Limited – IT Support, Web & Security Infrastructure" />
   <meta name="twitter:description" content="High-converting websites, fast IT support, enterprise Wi-Fi, and 4K CCTV setups. One partner, complete accountability." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&h=630&q=80" />
   
-  <!-- ===== STRUCTURED DATA (JSON‑LD) ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,17 +39,64 @@
   }
   </script>
   
-  <!-- ===== EXTERNAL CSS (CDN) ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
-  <!-- ===== LOCAL STYLES ===== -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  
+  <style>
+    /* Additional WhatsApp booking styles */
+    .service-card .btn-whatsapp {
+      margin: 0 24px 20px;
+      width: calc(100% - 48px);
+      justify-content: center;
+    }
+    .booking-inline {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .booking-inline .btn {
+      flex: 1;
+      min-width: 160px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+    .form-success {
+      background: var(--green-soft);
+      color: #065f46;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <!-- ===== PAGE LOADER (hidden by default) ===== -->
+  <!-- ===== PAGE LOADER ===== -->
   <div class="page-loader" id="pageLoader" style="display: none !important;">
     <div style="text-align:center;">
       <div class="spinner"></div>
@@ -103,6 +146,14 @@
     </div>
   </header>
 
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/254732832849?text=Hello%20Synerbrix%2C%20I%20need%20assistance%20with%20my%20technology%20needs." 
+     target="_blank" 
+     class="whatsapp-float" 
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
   <main>
     <!-- HERO SECTION -->
     <section class="hero" id="home">
@@ -141,7 +192,7 @@
       </div>
     </section>
 
-    <!-- PROOF & IMPACT METRICS -->
+    <!-- STATS BAR -->
     <section class="stats-bar">
       <div class="container">
         <div class="stats-grid">
@@ -153,7 +204,7 @@
       </div>
     </section>
 
-    <!-- PROBLEM / SOLUTION SECTION -->
+    <!-- PROBLEM / SOLUTION -->
     <section class="problem-solution section-padding">
       <div class="container">
         <div class="ps-grid">
@@ -352,7 +403,7 @@
       </div>
     </section>
 
-    <!-- CLIENT TESTIMONIALS SECTION -->
+    <!-- TESTIMONIALS -->
     <section class="testimonials section-padding" id="testimonials">
       <div class="container">
         <div class="section-header text-center">
@@ -361,13 +412,10 @@
           <p>Read how Synerbrix helps enterprises, institutions, and retail brands maintain zero downtime and scale faster.</p>
         </div>
         <div class="testimonials-grid">
-          <!-- Testimonial 1 -->
           <div class="testimonial-card reveal">
             <div>
               <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
               </div>
               <p class="testimonial-text">"Synerbrix revamped our entire office network and installed a 12-camera CCTV system across our main facility. The ability to monitor our warehouse live from our phones gives us total peace of mind. Their cabling work is extraordinarily clean!"</p>
@@ -379,14 +427,10 @@
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 2 -->
           <div class="testimonial-card reveal">
             <div>
               <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
               </div>
               <p class="testimonial-text">"Our new corporate website generated double the client inquiries in the very first month. Synerbrix delivered the exact responsive design and seamless M-Pesa integration we wanted on time and strictly within our agreed budget."</p>
@@ -398,14 +442,10 @@
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 3 -->
           <div class="testimonial-card reveal">
             <div>
               <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
               </div>
               <p class="testimonial-text">"Having one single accountable partner handle our computer maintenance, Wi-Fi router setup, and web hosting saves us endless hours every month. Their WhatsApp support response speed in Nairobi is phenomenal."</p>
@@ -417,68 +457,11 @@
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 4 -->
-          <div class="testimonial-card reveal">
-            <div>
-              <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
-              </div>
-              <p class="testimonial-text">"We deployed Synerbrix's automated M-Pesa Wi-Fi hotspot solution for our 45-unit apartment block in Imara Daima. Residents pay seamlessly, bandwidth limits work reliably, and monthly passive revenue is managed hands-off."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h5>Kelvin Maina</h5>
-                <span>Property Manager, Skyline Heights Apartments</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Testimonial 5 -->
-          <div class="testimonial-card reveal">
-            <div>
-              <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
-              </div>
-              <p class="testimonial-text">"When our main server suffered a severe ransomware threat last year, Synerbrix stepped in within an hour. They restored our sanitized backups without data loss and locked down our perimeter network. True professionals."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h5>James Kiptoo</h5>
-                <span>Head of Finance, Narok Commerce Group</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Testimonial 6 -->
-          <div class="testimonial-card reveal">
-            <div>
-              <div class="testimonial-header">
-                <div class="testimonial-stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Client</span>
-              </div>
-              <p class="testimonial-text">"The team upgraded our entire workstation fleet with SSDs and expanded RAM, doubling computer speeds at a fraction of the cost of buying new machines. Transparent itemized invoices every step of the way!"</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h5>Amina Hassan</h5>
-                <span>General Manager, Redwood Hospitality</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- HOW WE WORK -->
+    <!-- PROCESS -->
     <section class="how-it-works section-padding bg-light" id="how-it-works">
       <div class="container">
         <div class="section-header text-center">
@@ -511,7 +494,7 @@
       </div>
     </section>
 
-    <!-- ABOUT / TRUST -->
+    <!-- ABOUT -->
     <section class="about-summary section-padding" id="about">
       <div class="container about-container">
         <div class="about-text">
@@ -544,7 +527,7 @@
       </div>
     </section>
 
-    <!-- FAQ SECTION -->
+    <!-- FAQ -->
     <section class="faq-section section-padding bg-light" id="faq">
       <div class="container">
         <div class="section-header text-center">
@@ -553,67 +536,40 @@
           <p>Clear, direct answers to help you make an informed decision about your business technology.</p>
         </div>
         <div class="faq-accordion-container">
-          <!-- FAQ 1 -->
           <details class="faq-accordion-item reveal" open>
             <summary class="faq-summary">
-              <span><i class="fa-solid fa-clock text-accent" style="margin-right:10px;"></i> How fast can you respond to emergency IT outages or network failures?</span>
+              <span><i class="fa-solid fa-clock text-accent" style="margin-right:10px;"></i> How fast can you respond to emergency IT outages?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </summary>
-            <div class="faq-content">For urgent operational breakdowns within Nairobi and surrounding regions, our remote helpdesk initiates troubleshooting within <strong>15–30 minutes</strong>. If on-site technician dispatch is required, our emergency response team arrives within <strong>2 hours</strong> under our standard Service Level Agreement (SLA).</div>
+            <div class="faq-content">For urgent operational breakdowns within Nairobi, our remote helpdesk initiates troubleshooting within <strong>15–30 minutes</strong>. On-site dispatch arrives within <strong>2 hours</strong> under our standard SLA.</div>
           </details>
-          
-          <!-- FAQ 2 -->
           <details class="faq-accordion-item reveal">
             <summary class="faq-summary">
-              <span><i class="fa-solid fa-calculator text-accent" style="margin-right:10px;"></i> How much does a website design or custom web software cost?</span>
+              <span><i class="fa-solid fa-calculator text-accent" style="margin-right:10px;"></i> How much does a website design cost?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </summary>
-            <div class="faq-content">Pricing is transparent and project-based depending on your scope, page count, and functional requirements (such as M-Pesa payment gateways, customer portals, or database management). Following a free technical consultation, we deliver a fixed itemized quote upfront with <strong>zero hidden fees</strong>.</div>
+            <div class="faq-content">Pricing is project-based depending on scope. Following a free consultation, we deliver a fixed itemized quote with <strong>zero hidden fees</strong>.</div>
           </details>
-          
-          <!-- FAQ 3 -->
           <details class="faq-accordion-item reveal">
             <summary class="faq-summary">
-              <span><i class="fa-solid fa-video text-accent" style="margin-right:10px;"></i> Can I view my CCTV security cameras remotely on my mobile phone?</span>
+              <span><i class="fa-solid fa-video text-accent" style="margin-right:10px;"></i> Can I view CCTV remotely on my phone?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </summary>
-            <div class="faq-content">Yes, absolutely. All 4K and HD CCTV installations by Synerbrix include secure remote access configuration on iOS and Android smartphones, tablets, and computers. You can stream live footage, review recorded history, and receive motion detection push alerts anytime, anywhere.</div>
+            <div class="faq-content">Yes! All 4K and HD CCTV installations include secure remote access on iOS and Android devices. Stream live footage, review recordings, and receive motion alerts anytime.</div>
           </details>
-          
-          <!-- FAQ 4 -->
           <details class="faq-accordion-item reveal">
             <summary class="faq-summary">
-              <span><i class="fa-solid fa-wifi text-accent" style="margin-right:10px;"></i> How does commercial Wi-Fi hotspot M-Pesa billing work?</span>
+              <span><i class="fa-solid fa-wifi text-accent" style="margin-right:10px;"></i> How does commercial Wi-Fi M-Pesa billing work?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </summary>
-            <div class="faq-content">We deploy enterprise-grade access points integrated with automated M-Pesa PayBill software (PayBill 400200). Users who connect to your Wi-Fi network are greeted with a branded captive portal where they select a time or data bundle, pay directly via M-Pesa, and receive instant internet access without manual intervention.</div>
+            <div class="faq-content">We deploy access points integrated with M-Pesa PayBill (400200). Users connect, select a bundle, pay via M-Pesa, and get instant access without manual intervention.</div>
           </details>
-          
-          <!-- FAQ 5 -->
           <details class="faq-accordion-item reveal">
             <summary class="faq-summary">
-              <span><i class="fa-solid fa-shield-halved text-accent" style="margin-right:10px;"></i> Do your hardware components and installations come with warranties?</span>
+              <span><i class="fa-solid fa-handshake-angle text-accent" style="margin-right:10px;"></i> Can we retain Synerbrix for monthly IT maintenance?</span>
               <i class="fa-solid fa-chevron-down faq-icon"></i>
             </summary>
-            <div class="faq-content">Yes. All equipment supplied by Synerbrix (including CCTV cameras, network switches, routers, and computer parts) comes with manufacturer warranties ranging from <strong>1 to 3 years</strong>. Additionally, we provide a full workmanship guarantee on structured cabling, installation, and labor.</div>
-          </details>
-          
-          <!-- FAQ 6 -->
-          <details class="faq-accordion-item reveal">
-            <summary class="faq-summary">
-              <span><i class="fa-solid fa-handshake-angle text-accent" style="margin-right:10px;"></i> Can we retain Synerbrix for ongoing monthly IT maintenance?</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
-            </summary>
-            <div class="faq-content">Yes. We offer flexible Managed IT Retainer plans tailored to small and medium enterprises. This includes ongoing helpdesk support, proactive virus/security monitoring, automated cloud backups, network optimization, and regular hardware health checks for a predictable monthly fee.</div>
-          </details>
-          
-          <!-- FAQ 7 -->
-          <details class="faq-accordion-item reveal">
-            <summary class="faq-summary">
-              <span><i class="fa-solid fa-credit-card text-accent" style="margin-right:10px;"></i> What payment options do you accept for invoices?</span>
-              <i class="fa-solid fa-chevron-down faq-icon"></i>
-            </summary>
-            <div class="faq-content">We accept corporate M-Pesa PayBill payments using Business PayBill <strong>400200</strong> (Account Number: <strong>0714202996</strong>) as well as direct Electronic Funds Transfer (EFT) / Bank Transfer. All payments are officially receipted and accompanied by tax-compliant invoices.</div>
+            <div class="faq-content">Yes! We offer flexible Managed IT Retainer plans with helpdesk support, virus monitoring, cloud backups, and network optimization for a predictable monthly fee.</div>
           </details>
         </div>
       </div>
@@ -660,7 +616,7 @@
           </div>
           <div class="contact-form-card">
             <h3>Request Your Free Technical Quote</h3>
-            <p style="color:#64748b; font-size:0.9rem; margin-bottom:20px;">Fill in your details and our lead technician will contact you within 2 business hours.</p>
+            <p style="color:#64748b; font-size:0.9rem; margin-bottom:20px;">Fill in your details and we'll connect you via WhatsApp within 2 business hours.</p>
             <form id="quote-form" novalidate>
               <div class="form-group">
                 <label for="fullName">Full Name / Business Name</label>
@@ -692,13 +648,22 @@
                 <span class="error-msg" id="messageError">Please enter brief project details.</span>
               </div>
               <button type="submit" class="btn btn-primary btn-block">
-                Submit Quote Request <i class="fa-solid fa-paper-plane"></i>
+                Submit via WhatsApp <i class="fa-brands fa-whatsapp"></i>
               </button>
               <p class="cta-microcopy"><i class="fa-solid fa-lock"></i> Privacy Guaranteed. No spam or unrequested calls.</p>
             </form>
             <div id="formSuccess" class="form-success">
               <i class="fa-solid fa-circle-check"></i>
-              <p>Thank you! Your inquiry has been received. A Synerbrix specialist will reach out shortly.</p>
+              <p>Redirecting you to WhatsApp to complete your booking...</p>
+            </div>
+            <div style="margin-top: 16px; text-align: center;">
+              <p style="color: #64748b; font-size: 0.9rem;">Prefer to book instantly?</p>
+              <a href="https://wa.me/254732832849?text=Hello%20Synerbrix%2C%20I%20need%20a%20quote%20for%20your%20services." 
+                 target="_blank" 
+                 class="btn btn-whatsapp" 
+                 style="margin-top: 8px; width: 100%;">
+                <i class="fa-brands fa-whatsapp"></i> Book Now on WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -750,10 +715,7 @@
     </div>
   </footer>
 
-  <!-- ===== EXTERNAL JAVASCRIPT (CDN) ===== -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
-  
-  <!-- ===== LOCAL JAVASCRIPT ===== -->
   <script src="script.js" defer></script>
 </body>
 </html>

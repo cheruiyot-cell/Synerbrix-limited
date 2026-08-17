@@ -1,4 +1,4 @@
-// ===== SYNERBRIX LIMITED - MAIN JAVASCRIPT =====
+// ===== SYNERBRIX LIMITED =====
 document.addEventListener('DOMContentLoaded', function() {
   // ===== MOBILE NAVIGATION TOGGLE =====
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileToggle.addEventListener('click', function() {
       navMenu.classList.toggle('open');
       
-      // Toggle icon between bars and X
       const icon = mobileToggle.querySelector('i');
       if (icon) {
         if (navMenu.classList.contains('open')) {
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
         navMenu.classList.remove('open');
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Close menu when clicking a nav link
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -47,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // ===== SMOOTH SCROLL FOR NAV LINKS (enhanced) =====
+  // ===== SMOOTH SCROLL =====
   const allNavLinks = document.querySelectorAll('a[href^="#"]');
   allNavLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // ===== ACTIVE NAV LINK HIGHLIGHTING =====
+  // ===== ACTIVE NAV LINK =====
   const sections = document.querySelectorAll('section[id]');
   const navLinkItems = document.querySelectorAll('.nav-link');
   
@@ -91,81 +88,81 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   window.addEventListener('scroll', updateActiveNavLink);
-  updateActiveNavLink(); // Call once on load
+  updateActiveNavLink();
   
-  // ===== QUOTE FORM VALIDATION =====
+  // ===== WHATSAPP BOOKING FORM =====
   const quoteForm = document.getElementById('quote-form');
   const formSuccess = document.getElementById('formSuccess');
+  const WHATSAPP_NUMBER = '254732832849';
   
   if (quoteForm) {
     quoteForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Reset error messages
+      // Reset errors
       const errorMessages = document.querySelectorAll('.error-msg');
       errorMessages.forEach(msg => {
         msg.style.display = 'none';
       });
       
-      // Get form values
+      // Get values
       const fullName = document.getElementById('fullName').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value.trim();
       
-      // Validation flags
+      // Validate
       let isValid = true;
       
-      // Validate name
       if (!fullName) {
         document.getElementById('nameError').style.display = 'block';
         isValid = false;
       }
       
-      // Validate phone (basic check)
       if (!phone || phone.length < 9) {
         document.getElementById('phoneError').style.display = 'block';
         isValid = false;
       }
       
-      // Validate service selection
       if (!service) {
         document.getElementById('serviceError').style.display = 'block';
         isValid = false;
       }
       
-      // Validate message
       if (!message || message.length < 10) {
         document.getElementById('messageError').style.display = 'block';
         isValid = false;
       }
       
-      // If all valid, show success message
+      // If valid, redirect to WhatsApp
       if (isValid) {
-        // Here you would typically send data to a server
-        // For demo purposes, we'll show success message
-        quoteForm.style.display = 'none';
+        // Show success message briefly
         if (formSuccess) {
           formSuccess.style.display = 'block';
         }
         
-        // Optional: Scroll to success message
-        if (formSuccess) {
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        // Get service name
+        const serviceSelect = document.getElementById('service');
+        const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
         
-        // Reset form after 5 seconds (optional)
+        // Build WhatsApp message
+        const encodedMessage = encodeURIComponent(
+          `🔷 *New Service Inquiry - Synerbrix Limited*\n\n` +
+          `*Name:* ${fullName}\n` +
+          `*Phone:* ${phone}\n` +
+          `*Service Required:* ${serviceText}\n` +
+          `*Project Details:*\n${message}\n\n` +
+          `_Sent from Synerbrix website_`
+        );
+        
+        // Redirect after a short delay
         setTimeout(() => {
-          quoteForm.style.display = 'block';
-          if (formSuccess) {
-            formSuccess.style.display = 'none';
-          }
-          quoteForm.reset();
-        }, 5000);
+          window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+        }, 800);
       }
     });
     
-    // Real-time validation on input
+    // Real-time validation
     const inputs = quoteForm.querySelectorAll('input, select, textarea');
     inputs.forEach(input => {
       input.addEventListener('input', function() {
@@ -178,14 +175,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // ===== FAQ ACCORDION ENHANCEMENT =====
+  // ===== ADD WHATSAPP BUTTONS TO SERVICE CARDS =====
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach(card => {
+    const serviceTitle = card.querySelector('h3')?.textContent || 'Service';
+    const serviceDescription = card.querySelector('p')?.textContent || '';
+    
+    // Check if button already exists
+    if (!card.querySelector('.btn-whatsapp-service')) {
+      const whatsappBtn = document.createElement('a');
+      whatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        `🔷 *Service Inquiry: ${serviceTitle}*\n\n` +
+        `I'm interested in your ${serviceTitle} service.\n` +
+        `Please provide more details and a quote.\n\n` +
+        `_From Synerbrix website_`
+      )}`;
+      whatsappBtn.target = '_blank';
+      whatsappBtn.className = 'btn btn-whatsapp btn-whatsapp-service';
+      whatsappBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Book via WhatsApp';
+      card.appendChild(whatsappBtn);
+    }
+  });
+  
+  // ===== FAQ ACCORDION =====
   const faqItems = document.querySelectorAll('.faq-accordion-item');
   
   faqItems.forEach(item => {
     const summary = item.querySelector('.faq-summary');
     if (summary) {
       summary.addEventListener('click', function(e) {
-        // Close other open items (optional)
         if (!item.hasAttribute('open')) {
           faqItems.forEach(otherItem => {
             if (otherItem !== item && otherItem.hasAttribute('open')) {
@@ -197,11 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // ===== SCROLL ANIMATIONS (simple fade-in) =====
+  // ===== SCROLL ANIMATIONS =====
   const revealElements = document.querySelectorAll('.reveal');
-  
-  // Since we have a fallback that forces visibility, 
-  // we'll add a subtle animation using CSS transitions
   revealElements.forEach(element => {
     element.style.opacity = '1';
     element.style.transform = 'none';
@@ -209,27 +224,21 @@ document.addEventListener('DOMContentLoaded', function() {
     element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   });
   
-  // ===== STATS COUNTER ANIMATION (optional enhancement) =====
+  // ===== STATS ANIMATION =====
   const statItems = document.querySelectorAll('.stat-item h3');
-  
   function animateStats() {
     statItems.forEach(stat => {
       const text = stat.textContent;
       const hasNumber = /\d/.test(text);
-      
       if (hasNumber) {
-        // Simple animation - just add a highlight effect
         stat.style.transition = 'color 0.5s ease';
         stat.style.color = '#38bdf8';
       }
     });
   }
-  
-  // Call once on load
   animateStats();
   
-  // ===== CONSOLE LOG (for debugging) =====
-  console.log('✅ Synerbrix Limited - Premium website loaded successfully');
-  console.log('📞 Support: 0732 832 849');
-  console.log('💳 M-Pesa PayBill: 400200');
+  console.log('✅ Synerbrix Limited - WhatsApp booking enabled');
+  console.log('📞 WhatsApp: +254 732 832 849');
+  console.log('💳 M-Pesa PayBill: 400200 (Acc: 0714202996)');
 });
