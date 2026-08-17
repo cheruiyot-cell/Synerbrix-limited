@@ -1,332 +1,235 @@
-/**
- * Features: High-performance IntersectionObservers, GSAP integration with fallbacks,
- * mobile drawer locks, full Kenyan mobile regex, FAQ outside-click auto-collapse, 
- * and accessible form handling.
- */
-(function() {
-    'use strict';
-
-    // ----- HELPER FUNCTIONS -----
-    const getHeaderHeight = () => {
-        const header = document.querySelector('.header');
-        return header ? header.offsetHeight : 0;
-    };
-
-    // ----- 1. PAGE LOADER MANAGEMENT -----
-    const initPageLoader = () => {
-        const loader = document.getElementById('pageLoader');
-        if (!loader) return;
-
-        const hideLoader = () => {
-            if (!loader.classList.contains('hidden')) {
-                loader.classList.add('hidden');
-            }
-        };
-
-        if (document.readyState === 'complete') {
-            setTimeout(hideLoader, 300);
+// ===== SYNERBRIX LIMITED - MAIN JAVASCRIPT =====
+document.addEventListener('DOMContentLoaded', function() {
+  // ===== MOBILE NAVIGATION TOGGLE =====
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('open');
+      
+      // Toggle icon between bars and X
+      const icon = mobileToggle.querySelector('i');
+      if (icon) {
+        if (navMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
         } else {
-            window.addEventListener('load', () => setTimeout(hideLoader, 400));
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
         }
-
-        // Hard fallback to prevent infinite hanging
-        setTimeout(hideLoader, 2500);
-    };
-
-    // ----- 2. GSAP ANIMATIONS & FALLBACK -----
-    const initScrollAnimations = () => {
-        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Hero section timeline
-            const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-            heroTl.from('.hero-title', { duration: 1, y: 50, opacity: 0, delay: 0.2 })
-                  .from('.hero-subtitle', { duration: 0.8, y: 30, opacity: 0 }, '-=0.6')
-                  .from('.hero-buttons', { duration: 0.8, y: 20, opacity: 0 }, '-=0.5')
-                  .from('.hero-graphic', { duration: 1.2, x: 40, opacity: 0 }, '-=0.8');
-
-            // Staggered reveals via GSAP ScrollTrigger
-            const registerStagger = (selector, start = 'top 88%') => {
-                const elements = gsap.utils.toArray(selector);
-                if (!elements.length) return;
-
-                ScrollTrigger.batch(elements, {
-                    start: start,
-                    onEnter: batch => gsap.fromTo(batch, 
-                        { opacity: 0, y: 40 }, 
-                        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', stagger: 0.12 }
-                    ),
-                    once: true
-                });
-            };
-
-            registerStagger('.service-card');
-            registerStagger('.audience-card');
-            registerStagger('.step-card');
-            registerStagger('.stat-card', 'top 90%');
-            registerStagger('.ps-box', 'top 85%');
-
-        } else {
-            // IntersectionObserver Fallback if GSAP is unavailable
-            const revealElements = document.querySelectorAll('.reveal, .service-card, .audience-card, .step-card, .stat-card, .ps-box');
-            if (!('IntersectionObserver' in window)) {
-                revealElements.forEach(el => el.classList.add('visible'));
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            revealElements.forEach(el => {
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                observer.observe(el);
-            });
-        }
-    };
-
-    // ----- 3. ACCESSIBLE MOBILE DRAWER -----
-    const initMobileNav = () => {
-        const toggleBtn = document.getElementById('mobile-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        if (!toggleBtn || !navMenu) return;
-
-        const openMenu = () => {
-            navMenu.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Lock background scroll
-            toggleBtn.setAttribute('aria-expanded', 'true');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) icon.className = 'fa-solid fa-xmark';
-        };
-
-        const closeMenu = () => {
-            navMenu.classList.remove('active');
-            document.body.style.overflow = ''; // Unlock background scroll
-            toggleBtn.setAttribute('aria-expanded', 'false');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) icon.className = 'fa-solid fa-bars';
-        };
-
-        toggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isOpen = navMenu.classList.contains('active');
-            isOpen ? closeMenu() : openMenu();
-        });
-
-        // Close when clicking navigation links
-        navMenu.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Close when clicking outside drawer
-        document.addEventListener('click', (e) => {
-            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-                closeMenu();
-            }
-        });
-
-        // Close on Escape key press
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-    };
-
-    // ----- 4. HIGH-PERFORMANCE SCROLL SPY -----
-    const initScrollSpy = () => {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        if (!sections.length || !navLinks.length) return;
-
-        const linkMap = new Map();
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                linkMap.set(href.substring(1), link);
-            }
-        });
-
-        const observerOptions = {
-            root: null,
-            rootMargin: `-${getHeaderHeight() + 20}px 0px -40% 0px`,
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    const activeLink = linkMap.get(id);
-                    if (activeLink) activeLink.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => observer.observe(section));
-    };
-
-    // ----- 5. FAQ COLLAPSE ON OUTSIDE CLICK -----
-    const initFaqAccordion = () => {
-        document.addEventListener('click', (e) => {
-            // Check if user clicked on or inside a summary question
-            const clickedSummary = e.target.closest('summary.faq-summary');
-
-            // Collapse all open FAQs except the one currently clicked (if any)
-            document.querySelectorAll('details.faq-accordion-item[open]').forEach(faq => {
-                if (!clickedSummary || faq !== clickedSummary.parentElement) {
-                    faq.removeAttribute('open');
-                }
-            });
-        });
-    };
-
-    // ----- 6. FORM VALIDATION & INTERACTION -----
-    const initFormValidation = () => {
-        const form = document.getElementById('quote-form');
-        const successEl = document.getElementById('formSuccess');
-        if (!form) return;
-
-        const clearError = (inputEl, errorEl) => {
-            inputEl.classList.remove('error');
-            inputEl.removeAttribute('aria-invalid');
-            if (errorEl) errorEl.classList.remove('visible');
-        };
-
-        const showError = (inputEl, errorEl) => {
-            inputEl.classList.add('error');
-            inputEl.setAttribute('aria-invalid', 'true');
-            if (errorEl) errorEl.classList.add('visible');
-        };
-
-        // Live input cleaning as user types
-        form.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('input', () => {
-                const errorEl = document.getElementById(`${input.id}Error`);
-                clearError(input, errorEl);
-            });
-        });
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let isValid = true;
-            let firstInvalidInput = null;
-
-            // Validate Name
-            const name = document.getElementById('fullName');
-            const nameError = document.getElementById('nameError');
-            if (name && !name.value.trim()) {
-                showError(name, nameError);
-                isValid = false;
-                if (!firstInvalidInput) firstInvalidInput = name;
-            }
-
-            // Validate Phone (Kenyan Formats: 0712345678, 0112345678, +254712345678, 254712345678)
-            const phone = document.getElementById('phone');
-            const phoneError = document.getElementById('phoneError');
-            const phoneRegex = /^(?:254|\+254|0)?([17]\d{8})$/;
-            if (phone) {
-                const phoneVal = phone.value.trim();
-                if (!phoneVal || !phoneRegex.test(phoneVal)) {
-                    showError(phone, phoneError);
-                    isValid = false;
-                    if (!firstInvalidInput) firstInvalidInput = phone;
-                }
-            }
-
-            // Validate Service Selection
-            const service = document.getElementById('service');
-            const serviceError = document.getElementById('serviceError');
-            if (service && !service.value) {
-                showError(service, serviceError);
-                isValid = false;
-                if (!firstInvalidInput) firstInvalidInput = service;
-            }
-
-            // Validate Message
-            const message = document.getElementById('message');
-            const messageError = document.getElementById('messageError');
-            if (message && !message.value.trim()) {
-                showError(message, messageError);
-                isValid = false;
-                if (!firstInvalidInput) firstInvalidInput = message;
-            }
-
-            if (!isValid) {
-                if (firstInvalidInput) firstInvalidInput.focus();
-                return;
-            }
-
-            // Successful Submission Handling
-            if (successEl) {
-                successEl.style.display = 'block';
-                form.reset();
-
-                if (typeof gsap !== 'undefined') {
-                    gsap.fromTo(successEl, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' });
-                }
-
-                setTimeout(() => {
-                    if (typeof gsap !== 'undefined') {
-                        gsap.to(successEl, {
-                            duration: 0.4,
-                            opacity: 0,
-                            onComplete: () => {
-                                successEl.style.display = 'none';
-                                successEl.style.opacity = '1';
-                            }
-                        });
-                    } else {
-                        successEl.style.display = 'none';
-                    }
-                }, 6000);
-            }
-        });
-    };
-
-    // ----- 7. HEADER-OFFSET SMOOTH SCROLL -----
-    const initSmoothScroll = () => {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (!targetId || targetId === '#') return;
-
-                const target = document.querySelector(targetId);
-                if (!target) return;
-
-                e.preventDefault();
-
-                const headerOffset = getHeaderHeight();
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    };
-
-    // ----- INITIALIZATION -----
-    document.addEventListener('DOMContentLoaded', () => {
-        initPageLoader();
-        initScrollAnimations();
-        initMobileNav();
-        initScrollSpy();
-        initFaqAccordion();
-        initFormValidation();
-        initSmoothScroll();
+      }
     });
-
-})();
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+        navMenu.classList.remove('open');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+    
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('open');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+  }
+  
+  // ===== SMOOTH SCROLL FOR NAV LINKS (enhanced) =====
+  const allNavLinks = document.querySelectorAll('a[href^="#"]');
+  allNavLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
+  // ===== ACTIVE NAV LINK HIGHLIGHTING =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinkItems = document.querySelectorAll('.nav-link');
+  
+  function updateActiveNavLink() {
+    let current = '';
+    const scrollPosition = window.scrollY + 200;
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinkItems.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', updateActiveNavLink);
+  updateActiveNavLink(); // Call once on load
+  
+  // ===== QUOTE FORM VALIDATION =====
+  const quoteForm = document.getElementById('quote-form');
+  const formSuccess = document.getElementById('formSuccess');
+  
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset error messages
+      const errorMessages = document.querySelectorAll('.error-msg');
+      errorMessages.forEach(msg => {
+        msg.style.display = 'none';
+      });
+      
+      // Get form values
+      const fullName = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      
+      // Validation flags
+      let isValid = true;
+      
+      // Validate name
+      if (!fullName) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Validate phone (basic check)
+      if (!phone || phone.length < 9) {
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Validate service selection
+      if (!service) {
+        document.getElementById('serviceError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Validate message
+      if (!message || message.length < 10) {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // If all valid, show success message
+      if (isValid) {
+        // Here you would typically send data to a server
+        // For demo purposes, we'll show success message
+        quoteForm.style.display = 'none';
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+        }
+        
+        // Optional: Scroll to success message
+        if (formSuccess) {
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        // Reset form after 5 seconds (optional)
+        setTimeout(() => {
+          quoteForm.style.display = 'block';
+          if (formSuccess) {
+            formSuccess.style.display = 'none';
+          }
+          quoteForm.reset();
+        }, 5000);
+      }
+    });
+    
+    // Real-time validation on input
+    const inputs = quoteForm.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('input', function() {
+        const errorId = this.id + 'Error';
+        const errorElement = document.getElementById(errorId);
+        if (errorElement && this.value.trim()) {
+          errorElement.style.display = 'none';
+        }
+      });
+    });
+  }
+  
+  // ===== FAQ ACCORDION ENHANCEMENT =====
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  
+  faqItems.forEach(item => {
+    const summary = item.querySelector('.faq-summary');
+    if (summary) {
+      summary.addEventListener('click', function(e) {
+        // Close other open items (optional)
+        if (!item.hasAttribute('open')) {
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.hasAttribute('open')) {
+              otherItem.removeAttribute('open');
+            }
+          });
+        }
+      });
+    }
+  });
+  
+  // ===== SCROLL ANIMATIONS (simple fade-in) =====
+  const revealElements = document.querySelectorAll('.reveal');
+  
+  // Since we have a fallback that forces visibility, 
+  // we'll add a subtle animation using CSS transitions
+  revealElements.forEach(element => {
+    element.style.opacity = '1';
+    element.style.transform = 'none';
+    element.style.visibility = 'visible';
+    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  // ===== STATS COUNTER ANIMATION (optional enhancement) =====
+  const statItems = document.querySelectorAll('.stat-item h3');
+  
+  function animateStats() {
+    statItems.forEach(stat => {
+      const text = stat.textContent;
+      const hasNumber = /\d/.test(text);
+      
+      if (hasNumber) {
+        // Simple animation - just add a highlight effect
+        stat.style.transition = 'color 0.5s ease';
+        stat.style.color = '#38bdf8';
+      }
+    });
+  }
+  
+  // Call once on load
+  animateStats();
+  
+  // ===== CONSOLE LOG (for debugging) =====
+  console.log('✅ Synerbrix Limited - Premium website loaded successfully');
+  console.log('📞 Support: 0732 832 849');
+  console.log('💳 M-Pesa PayBill: 400200');
+});
