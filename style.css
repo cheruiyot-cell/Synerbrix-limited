@@ -56,6 +56,8 @@ section {
 img {
   max-width: 100%;
   display: block;
+  /* Mobile optimization: prevent layout shift */
+  height: auto;
 }
 
 a {
@@ -423,6 +425,7 @@ ul {
   border-radius: 0 0 16px 16px;
 }
 
+/* ===== HERO IMAGE OPTIMIZED ===== */
 .hero-main-img {
   width: 100%;
   height: 100%;
@@ -430,6 +433,8 @@ ul {
   border-radius: 0 0 16px 16px;
   display: block;
   aspect-ratio: 4/3;
+  background: #f1f5f9; /* placeholder color */
+  content-visibility: auto;
 }
 
 .floating-badge {
@@ -602,11 +607,15 @@ ul {
   position: relative;
 }
 
+/* ===== OPERATIONS CENTER IMAGE OPTIMIZED ===== */
 .service-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s;
+  background: #f8fafc;
+  aspect-ratio: 16/9;
+  content-visibility: auto;
 }
 
 .service-card:hover .service-img {
@@ -1192,5 +1201,27 @@ ul {
   .top-bar-content {
     justify-content: center;
     text-align: center;
+  }
+  
+  /* ===== MOBILE IMAGE OPTIMIZATIONS ===== */
+  .hero-main-img {
+    aspect-ratio: 16/9;
+    background: #e2e8f0;
+    min-height: 200px;
+  }
+  
+  .service-img {
+    aspect-ratio: 16/9;
+    min-height: 140px;
+    background: #e2e8f0;
+  }
+  
+  .hero-main-img,
+  .service-img {
+    content-visibility: auto;
+  }
+  
+  .service-img-wrap {
+    height: 160px;
   }
 }
